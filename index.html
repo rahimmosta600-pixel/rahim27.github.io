@@ -4,79 +4,228 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>متجر عبد الرحيم للشحن</title>
+
 <style>
 *{box-sizing:border-box}
+
 body{
-margin:0;font-family:Arial,Tahoma,sans-serif;
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
 background:linear-gradient(135deg,#07111f,#0d1b2f 45%,#101827);
-color:#fff;min-height:100vh
+color:#fff;
+min-height:100vh
 }
+
 header{
-position:sticky;top:0;z-index:10;
-background:rgba(5,12,23,.94);backdrop-filter:blur(12px);
-border-bottom:1px solid #24334a;padding:16px 14px;text-align:center
+position:sticky;
+top:0;
+z-index:10;
+background:rgba(5,12,23,.96);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #24334a;
+padding:16px 14px;
+text-align:center
 }
-header h1{margin:0 0 7px;font-size:24px;color:#52d9ff}
-header p{margin:0;color:#d5dfec;font-size:14px}
-.whatsapp{color:#50e58a;font-weight:bold}
-.container{max-width:1050px;margin:auto;padding:22px 14px 50px}
-.hero{text-align:center;padding:18px 10px 24px}
-.hero h2{margin:0 0 8px;font-size:27px}
-.hero p{margin:0;color:#aebed2}
+
+header h1{
+margin:0 0 7px;
+font-size:24px;
+color:#52d9ff
+}
+
+header p{
+margin:0;
+color:#d5dfec;
+font-size:14px
+}
+
+.whatsapp{
+color:#50e58a;
+font-weight:bold
+}
+
+.container{
+max-width:1050px;
+margin:auto;
+padding:22px 14px 50px
+}
+
+.hero{
+text-align:center;
+padding:18px 10px 24px
+}
+
+.hero h2{
+margin:0 0 8px;
+font-size:27px
+}
+
+.hero p{
+margin:0;
+color:#aebed2
+}
+
 .grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
 gap:15px
 }
+
 .app{
 background:linear-gradient(145deg,#122238,#0d1727);
-border:1px solid #263c58;border-radius:20px;padding:17px;
-min-height:190px;display:flex;flex-direction:column;align-items:center;
-justify-content:space-between;box-shadow:0 10px 30px rgba(0,0,0,.22);
-transition:.2s
+border:1px solid #263c58;
+border-radius:20px;
+padding:17px;
+min-height:205px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+box-shadow:0 10px 30px rgba(0,0,0,.22)
 }
-.app:hover{transform:translateY(-4px);border-color:#3ed6ff}
+
+.app:hover{
+transform:translateY(-4px);
+border-color:#3ed6ff
+}
+
 .icon{
-width:74px;height:74px;border-radius:20px;display:grid;place-items:center;overflow:hidden;
+width:78px;
+height:78px;
+border-radius:20px;
+display:grid;
+place-items:center;
 background:linear-gradient(135deg,#1d6cff,#7d4dff);
-font-size:29px;font-weight:800;box-shadow:0 8px 20px rgba(46,121,255,.25)
+font-size:38px
 }
-.app h3{margin:12px 0 4px;font-size:17px}
-.app small{color:#9fb0c5;text-align:center}
+
+.app h3{
+margin:12px 0 4px;
+font-size:17px;
+text-align:center
+}
+
+.app small{
+color:#9fb0c5;
+text-align:center
+}
+
 button{
-border:0;cursor:pointer;font-weight:bold;border-radius:12px;
-padding:11px 15px;color:#fff;background:linear-gradient(90deg,#007bff,#00b8d9);
+border:0;
+cursor:pointer;
+font-weight:bold;
+border-radius:12px;
+padding:11px 15px;
+color:#fff;
+background:linear-gradient(90deg,#007bff,#00b8d9)
 }
-.buy{width:100%;margin-top:10px}
+
+.buy{
+width:100%;
+margin-top:10px
+}
+
 .section{
-margin-top:28px;background:#0c1829;border:1px solid #21334c;
-border-radius:18px;padding:18px
+margin-top:28px;
+background:#0c1829;
+border:1px solid #21334c;
+border-radius:18px;
+padding:18px
 }
-.section h3{margin-top:0}
+
+.payments{
+display:flex;
+flex-wrap:wrap;
+gap:8px
+}
+
+.payment{
+background:#13243a;
+border:1px solid #29415e;
+border-radius:10px;
+padding:9px 12px
+}
+
 .modal{
-display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);
-z-index:100;padding:15px;overflow:auto
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.78);
+z-index:100;
+padding:15px;
+overflow:auto
 }
+
 .modal-box{
-max-width:520px;margin:40px auto;background:#0d1b2e;
-border:1px solid #2c4564;border-radius:22px;padding:20px
+max-width:520px;
+margin:30px auto;
+background:#0d1b2e;
+border:1px solid #2c4564;
+border-radius:22px;
+padding:20px
 }
-.close{float:left;background:#27384f;padding:7px 11px}
-label{display:block;margin:14px 0 7px;color:#d7e4f3}
+
+.close{
+float:left;
+background:#27384f;
+padding:7px 11px
+}
+
+label{
+display:block;
+margin:14px 0 7px;
+color:#d7e4f3
+}
+
 input,select{
-width:100%;padding:13px;border-radius:12px;border:1px solid #38516f;
-background:#07111f;color:#fff;font-size:15px;outline:none
+width:100%;
+padding:13px;
+border-radius:12px;
+border:1px solid #38516f;
+background:#07111f;
+color:#fff;
+font-size:15px
 }
-.offer-list{display:grid;gap:9px;margin:14px 0}
+
+.offer-list{
+display:grid;
+gap:9px;
+margin:14px 0
+}
+
 .offer{
-display:flex;justify-content:space-between;align-items:center;
-background:#101f33;border:1px solid #29415e;border-radius:12px;padding:12px
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+background:#101f33;
+border:1px solid #29415e;
+border-radius:12px;
+padding:12px
 }
-.offer button{padding:8px 12px}
+
 .notice{
-margin-top:14px;padding:12px;border-radius:12px;background:#10263b;
-color:#b9cce0;font-size:13px;line-height:1.7
+margin-top:14px;
+padding:12px;
+border-radius:12px;
+background:#10263b;
+color:#b9cce0;
+font-size:13px;
+line-height:1.7
 }
-footer{text-align:center;color:#8193aa;padding:25px 10px;font-size:13px}
+
+footer{
+text-align:center;
+color:#8193aa;
+padding:25px 10px;
+font-size:13px
+}
+
+@media(max-width:420px){
+.grid{
+grid-template-columns:repeat(2,1fr)
+}
+}
 </style>
 </head>
 
@@ -99,14 +248,21 @@ footer{text-align:center;color:#8193aa;padding:25px 10px;font-size:13px}
 
 <div class="section">
 <h3>💳 طرق الدفع</h3>
-<p>متاح حالياً: Flexy، BaridiMob، البطاقة الذهبية، RedotPay، Visa.</p>
+
+<div class="payments">
+<span class="payment">Flexy</span>
+<span class="payment">BaridiMob</span>
+<span class="payment">البطاقة الذهبية</span>
+<span class="payment">RedotPay</span>
+<span class="payment">Visa</span>
+</div>
 
 <div class="notice">
 بعد اختيار العرض، أدخل ID الخاص بحسابك واختر طريقة الدفع.
-يتم تأكيد الطلب عبر واتساب.
-</div>
+يتم إرسال تفاصيل الطلب إلى واتساب لتأكيده.
 </div>
 
+</div>
 </div>
 
 <footer>
@@ -117,4 +273,244 @@ footer{text-align:center;color:#8193aa;padding:25px 10px;font-size:13px}
 
 <div class="modal-box">
 
-<button class="close" onclick="closeModal()">✕</
+<button class="close" onclick="closeModal()">✕</button>
+
+<h2 id="modalTitle">عروض الشحن</h2>
+
+<div class="offer-list" id="offers"></div>
+
+<div id="orderForm" style="display:none">
+
+<label for="accountId">ID / اسم الحساب</label>
+
+<input
+id="accountId"
+type="text"
+placeholder="اكتب ID الخاص بك">
+
+<label for="payment">طريقة الدفع</label>
+
+<select id="payment">
+<option>Flexy</option>
+<option>BaridiMob</option>
+<option>البطاقة الذهبية</option>
+<option>RedotPay</option>
+<option>Visa</option>
+</select>
+
+<button
+style="width:100%;margin-top:16px"
+onclick="sendOrder()">
+📲 إرسال الطلب عبر واتساب
+</button>
+
+</div>
+
+<div class="notice">
+ملاحظة: اكتب ID بشكل صحيح قبل إرسال الطلب.
+سيتم التواصل معك عبر واتساب لتأكيد التفاصيل والسعر.
+</div>
+
+</div>
+</div>
+
+<script>
+
+const apps=[
+
+{
+name:"PUBG Mobile",
+icon:"🎮",
+offers:[
+"شحن PUBG Mobile",
+"UC - اختر الكمية عند الطلب"
+]
+},
+
+{
+name:"Free Fire",
+icon:"🔥",
+offers:[
+"شحن Free Fire",
+"Diamonds - اختر الكمية عند الطلب"
+]
+},
+
+{
+name:"eFootball / PES",
+icon:"⚽",
+offers:[
+"شحن eFootball",
+"Coins - اختر الكمية عند الطلب"
+]
+},
+
+{
+name:"TikTok",
+icon:"🎵",
+offers:[
+"شحن TikTok",
+"Coins - اختر الكمية عند الطلب"
+]
+},
+
+{
+name:"Netflix",
+icon:"🎬",
+offers:[
+"اشتراك Netflix",
+"اختر الباقة عند الطلب"
+]
+},
+
+{
+name:"Tengo Live",
+icon:"📺",
+offers:[
+"شحن Tengo Live",
+"اختر الكمية عند الطلب"
+]
+},
+
+{
+name:"Ludo",
+icon:"🎲",
+offers:[
+"شحن Ludo",
+"اختر الكمية عند الطلب"
+]
+},
+
+{
+name:"AliExpress",
+icon:"🛒",
+offers:[
+"شراء من AliExpress",
+"أرسل رابط المنتج والكمية"
+]
+},
+
+{
+name:"TEMU",
+icon:"🛍️",
+offers:[
+"شراء من TEMU",
+"أرسل رابط المنتج والكمية"
+]
+}
+
+];
+
+const appsBox=document.getElementById("apps");
+const modal=document.getElementById("modal");
+const modalTitle=document.getElementById("modalTitle");
+const offersBox=document.getElementById("offers");
+const orderForm=document.getElementById("orderForm");
+
+let selectedApp="";
+let selectedOffer="";
+
+apps.forEach((app,index)=>{
+
+const card=document.createElement("div");
+
+card.className="app";
+
+card.innerHTML=
+'<div class="icon">'+app.icon+'</div>'+
+'<div><h3>'+app.name+'</h3>'+
+'<small>عروض الشحن والشراء</small></div>'+
+'<button class="buy" onclick="openApp('+index+')">'+
+'عرض العروض</button>';
+
+appsBox.appendChild(card);
+
+});
+
+function openApp(index){
+
+const app=apps[index];
+
+selectedApp=app.name;
+
+modalTitle.textContent="📦 عروض "+app.name;
+
+offersBox.innerHTML="";
+
+orderForm.style.display="none";
+
+app.offers.forEach(offer=>{
+
+const row=document.createElement("div");
+
+row.className="offer";
+
+row.innerHTML=
+'<span>'+offer+'</span>'+
+'<button onclick="chooseOffer('+JSON.stringify(offer)+')">'+
+'شراء</button>';
+
+offersBox.appendChild(row);
+
+});
+
+modal.style.display="block";
+
+}
+
+function chooseOffer(offer){
+
+selectedOffer=offer;
+
+orderForm.style.display="block";
+
+document.getElementById("accountId").focus();
+
+}
+
+function closeModal(){
+
+modal.style.display="none";
+
+}
+
+window.addEventListener("click",e=>{
+
+if(e.target===modal){
+closeModal();
+}
+
+});
+
+function sendOrder(){
+
+const id=document.getElementById("accountId").value.trim();
+
+const payment=document.getElementById("payment").value;
+
+if(!id){
+
+alert("من فضلك اكتب ID أو اسم الحساب.");
+
+return;
+
+}
+
+const text=
+"طلب جديد من متجر عبد الرحيم للشحن%0A%0A"+
+"التطبيق: "+encodeURIComponent(selectedApp)+
+"%0Aالعرض: "+encodeURIComponent(selectedOffer)+
+"%0AID/الحساب: "+encodeURIComponent(id)+
+"%0Aطريقة الدفع: "+encodeURIComponent(payment);
+
+window.open(
+"https://wa.me/213662942215?text="+text,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
