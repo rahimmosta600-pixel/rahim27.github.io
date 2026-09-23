@@ -42,6 +42,32 @@ footer{border-top:1px solid #1c2540;padding:28px 0 45px;color:var(--muted);text-
 .float{position:fixed;left:18px;bottom:18px;z-index:20;background:#20e36b;color:#07110a;padding:14px 18px;border-radius:999px;font-weight:900;box-shadow:0 10px 30px #0008}
 @media(max-width:850px){.grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.navlinks{display:none}}
 @media(max-width:450px){.services{grid-template-columns:1fr}.hero{padding-top:16px}}
+
+/* === Professional order system === */
+.order-box{max-width:900px;margin:auto;background:linear-gradient(180deg,#141b32,#0b1020);border:1px solid #2d3b66;border-radius:24px;padding:24px;box-shadow:0 20px 55px #0007}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:900;color:#eef2ff}
+.field input,.field select,.field textarea{width:100%;padding:14px;border-radius:13px;border:1px solid #2b385d;background:#080d1b;color:#fff;font:inherit;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #ffd40018}
+.field small{color:var(--muted)}
+.payment-choice{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.payment-choice label{cursor:pointer}
+.payment-choice input{display:none}
+.payment-card{display:block;text-align:center;padding:13px 8px;border:1px solid #2b385d;border-radius:14px;background:#0d1324;font-weight:900}
+.payment-choice input:checked + .payment-card{border-color:var(--accent);background:#201d08;box-shadow:0 0 0 2px #ffd40022}
+.order-summary{margin-top:18px;padding:18px;border:1px dashed #42527e;border-radius:16px;background:#090e1c}
+.summary-row{display:flex;justify-content:space-between;gap:15px;padding:7px 0;color:#dfe5ff}
+.summary-row.total{border-top:1px solid #26304e;margin-top:8px;padding-top:13px;font-size:20px;font-weight:900}
+.summary-row.total strong{color:var(--accent)}
+.order-submit{width:100%;border:0;cursor:pointer;font:inherit;margin-top:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.step{padding:12px;border-radius:14px;background:#0b1020;border:1px solid #253252;text-align:center}
+.step b{display:block;color:var(--accent)}
+.secure{margin-top:12px;text-align:center;color:#9eeab6;font-size:13px}
+@media(max-width:650px){.order-grid{grid-template-columns:1fr}.payment-choice{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -49,7 +75,7 @@ footer{border-top:1px solid #1c2540;padding:28px 0 45px;color:var(--muted);text-
 <div class="container nav">
 <div class="brand">🎮 <b>متجر عبد الرحيم</b> للشحن السريع</div>
 <nav class="navlinks">
-<a href="#prices">الأسعار</a><a href="#services">الخدمات</a><a href="#payment">الدفع</a><a href="#contact">تواصل معنا</a>
+<a href="#prices">الأسعار</a><a href="#order">طلب شحن</a><a href="#services">الخدمات</a><a href="#payment">الدفع</a><a href="#contact">تواصل معنا</a>
 </nav>
 <a class="btn green" href="https://wa.me/213662942215?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%A7%D9%85%20%D9%85%D9%86%20%D9%85%D8%AA%D8%AC%D8%B1%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%AD%D9%8A%D9%85%20%D9%84%D9%84%D8%B4%D8%AD%D9%86%20%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B9.">اطلب الآن</a>
 </div>
@@ -128,35 +154,83 @@ footer{border-top:1px solid #1c2540;padding:28px 0 45px;color:var(--muted);text-
 </div>
 </section>
 
-<section id="contact">
+
+<section id="order">
 <div class="container">
-<div class="title"><h2>📞 تواصل معنا</h2><p>مستغانم - الجزائر</p></div>
-<div class="contact">
-<div class="card">
-<h3>متجر عبد الرحيم للشحن السريع</h3>
-<p>📍 المدينة: <b>مستغانم</b></p>
-<p>📱 واتساب: <b>+213 662 942 215</b></p>
-<p>📘 Facebook: <b>Râhim Kôï</b></p>
-<p>📸 Instagram: <b>rahim__27</b></p>
-<a class="btn green" href="https://wa.me/213662942215">فتح واتساب</a>
-</div>
-<div class="card">
-<h3>🚀 اطلب الآن</h3>
-<p>أرسل اسم اللعبة، الباقة المطلوبة، وطريقة الدفع المناسبة لك. سيتم تأكيد الطلب معك عبر واتساب.</p>
-<a class="btn green" href="https://wa.me/213662942215?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B7%D9%84%D8%A8%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%85%D9%86%20%D9%85%D8%AA%D8%AC%D8%B1%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%AD%D9%8A%D9%85%20%D9%84%D9%84%D8%B4%D8%AD%D9%86%20%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B9.">بدء الطلب</a>
-</div>
-</div>
+  <div class="title">
+    <h2>🛒 طلب شحن مباشر</h2>
+    <p>اختر الخدمة والباقة وأرسل الطلب بسهولة</p>
+  </div>
+
+  <div class="order-box">
+    <div class="steps">
+      <div class="step"><b>1️⃣ اختر الخدمة</b>اللعبة والباقة</div>
+      <div class="step"><b>2️⃣ أدخل البيانات</b>معرّف اللاعب</div>
+      <div class="step"><b>3️⃣ أرسل الطلب</b>عبر واتساب</div>
+    </div>
+
+    <form id="orderForm">
+      <div class="order-grid">
+        <div class="field">
+          <label for="game">🎮 اللعبة / الخدمة</label>
+          <select id="game" required>
+            <option value="">اختر الخدمة</option>
+            <option value="PES / eFootball">PES / eFootball</option>
+            <option value="PUBG Mobile">PUBG Mobile</option>
+            <option value="Free Fire">Free Fire</option>
+            <option value="شراء من AliExpress">شراء من AliExpress</option>
+            <option value="شراء من Temu">شراء من Temu</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="package">📦 الباقة</label>
+          <select id="package" required disabled>
+            <option value="">اختر اللعبة أولاً</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="playerId">🆔 ID اللاعب</label>
+          <input id="playerId" type="text" placeholder="مثال: 5123456789">
+          <small>مطلوب لشحن الألعاب فقط.</small>
+        </div>
+
+        <div class="field">
+          <label for="playerName">👤 اسم اللاعب</label>
+          <input id="playerName" type="text" placeholder="اختياري">
+        </div>
+
+        <div class="field full">
+          <label>💳 طريقة الدفع</label>
+          <div class="payment-choice">
+            <label><input type="radio" name="payment" value="بريدي موب" required><span class="payment-card">🏦 بريدي موب</span></label>
+            <label><input type="radio" name="payment" value="CCP"><span class="payment-card">💳 CCP</span></label>
+            <label><input type="radio" name="payment" value="RedotPay"><span class="payment-card">💳 RedotPay</span></label>
+            <label><input type="radio" name="payment" value="Visa"><span class="payment-card">💳 Visa</span></label>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="note">📝 ملاحظات</label>
+          <textarea id="note" rows="3" placeholder="اكتب أي ملاحظة أو تفاصيل إضافية..."></textarea>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <div class="summary-row"><span>الخدمة</span><strong id="sumGame">—</strong></div>
+        <div class="summary-row"><span>الباقة</span><strong id="sumPackage">—</strong></div>
+        <div class="summary-row"><span>طريقة الدفع</span><strong id="sumPayment">—</strong></div>
+        <div class="summary-row total"><span>المبلغ</span><strong id="sumPrice">—</strong></div>
+      </div>
+
+      <button class="btn green order-submit" type="submit">📲 تأكيد الطلب وإرساله عبر واتساب</button>
+      <div class="secure">🔒 لا نطلب كلمة مرور حساب اللعبة أو رمز التحقق البنكي.</div>
+    </form>
+  </div>
 </div>
 </section>
-</main>
 
-<footer>
+<section id="contact">
 <div class="container">
-© 2026 متجر عبد الرحيم للشحن السريع — مستغانم، الجزائر<br>
-شحن ألعاب • AliExpress • Temu • خدمات شراء أونلاين
-</div>
-</footer>
-
-<a class="float" href="https://wa.me/213662942215">💬 واتساب</a>
-</body>
-</html>
+<div class="title"><h2>📞 تواصل معنا</h2><p>مستغانم - الجزائر</p></di
