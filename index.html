@@ -2,255 +2,436 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>rahimdz27 | شحن ألعاب وباقات وشراء من مواقع 🇩🇿</title>
+<title>rahimdz27 | شحن ألعاب وباقات وشراء من المواقع 🇩🇿</title>
 
-<meta name="description"
-content="rahimdz27 🇩🇿 متجر شحن ألعاب وباقات وشراء من مواقع. eFootball وPUBG Mobile وFree Fire.">
+<meta name="description" content="rahimdz27 متجر جزائري لشحن الألعاب والباقات والشراء من المواقع. PUBG Mobile وFree Fire وeFootball وPES.">
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-font-family:Arial,Tahoma,sans-serif;
-background:linear-gradient(135deg,#020617,#071a33);
-color:#fff;
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:
+    radial-gradient(circle at top right,#12345c 0,#07111f 38%,#050b14 100%);
+  color:#fff;
+  min-height:100vh;
+}
+
+button,
+input,
+select{
+  font-family:inherit;
 }
 
 header{
-text-align:center;
-padding:22px 12px;
-background:#081426;
-border-bottom:2px solid #ffd000;
-position:sticky;
-top:0;
-z-index:10;
+  position:sticky;
+  top:0;
+  z-index:50;
+  padding:15px 12px;
+  text-align:center;
+  background:rgba(4,10,18,.96);
+  border-bottom:1px solid #263b55;
+  backdrop-filter:blur(12px);
 }
 
-header h1{
-margin:0;
-font-size:28px;
-color:#ffd000;
+.logo{
+  font-size:27px;
+  font-weight:900;
+  color:#52d9ff;
+  margin-bottom:6px;
 }
 
-header p{margin:8px 0;color:#d9e5f3}
+.header-text{
+  color:#c9d8e8;
+  font-size:14px;
+}
+
+.whatsapp{
+  color:#4ee58b;
+  font-weight:bold;
+}
 
 .container{
-max-width:900px;
-margin:auto;
-padding:18px 12px 50px;
+  width:min(1100px,94%);
+  margin:auto;
+  padding:20px 0 60px;
 }
 
 .hero{
-text-align:center;
-padding:25px 15px;
-border-radius:22px;
-background:#0c1d34;
-margin-bottom:25px;
+  text-align:center;
+  padding:25px 10px 30px;
 }
 
-.hero h2{color:#ffd000}
+.flag{
+  font-size:45px;
+}
+
+.hero h1{
+  margin:8px 0;
+  font-size:30px;
+}
+
+.hero p{
+  color:#aebfd3;
+  line-height:1.8;
+  margin:0;
+}
+
+.section-title{
+  text-align:center;
+  margin:20px 0;
+}
+
+.section-title h2{
+  margin:0 0 7px;
+}
+
+.section-title p{
+  margin:0;
+  color:#9fb1c6;
+}
 
 .apps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:14px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+  gap:16px;
 }
 
-.app{
-border:1px solid #294968;
-background:#0d2038;
-border-radius:20px;
-padding:18px 10px;
-text-align:center;
-cursor:pointer;
-transition:.2s;
+.app-card{
+  min-height:220px;
+  padding:18px 14px;
+  border-radius:22px;
+  border:1px solid #29415e;
+  background:linear-gradient(145deg,#122238,#0b1626);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  text-align:center;
+  box-shadow:0 12px 35px rgba(0,0,0,.25);
+  transition:.2s;
 }
 
-.app:hover{transform:translateY(-3px)}
+.app-card:hover{
+  transform:translateY(-4px);
+  border-color:#43d8ff;
+}
 
 .app-icon{
-font-size:50px;
-margin-bottom:8px;
+  width:82px;
+  height:82px;
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  font-size:42px;
+  background:linear-gradient(135deg,#126cff,#784bff);
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
-.app h3{margin:5px 0}
-
-.app small{
-color:#aebed0;
+.app-card h3{
+  margin:12px 0 5px;
+  font-size:18px;
 }
 
-.available{
-color:#49ed83;
+.app-card small{
+  color:#94a9bf;
+}
+
+.btn{
+  width:100%;
+  border:0;
+  border-radius:13px;
+  padding:12px;
+  margin-top:12px;
+  cursor:pointer;
+  font-weight:bold;
+  color:#fff;
+  background:linear-gradient(90deg,#007bff,#00b8d9);
+}
+
+.btn:hover{
+  opacity:.9;
 }
 
 .soon{
-color:#ffd000;
+  opacity:.7;
 }
 
-.page{
-display:none;
+.payment-section{
+  margin-top:35px;
+  padding:20px;
+  border-radius:20px;
+  border:1px solid #263d59;
+  background:#0c192a;
 }
 
-.page.active{
-display:block;
-}
-
-.back{
-display:block;
-margin-bottom:15px;
-background:#172b45;
-color:white;
-padding:12px;
-border-radius:12px;
-text-align:center;
-cursor:pointer;
-}
-
-.title{
-color:#ffd000;
-margin:18px 0;
-}
-
-.offer{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-background:#07111f;
-border:1px solid #294663;
-border-radius:14px;
-padding:13px;
-margin:8px 0;
-}
-
-.offer strong{
-color:#ffd000;
-font-size:18px;
-}
-
-.buy{
-display:block;
-width:100%;
-padding:13px;
-margin-top:14px;
-border:0;
-border-radius:13px;
-background:#13c968;
-color:white;
-font-weight:bold;
-font-size:16px;
-text-decoration:none;
-text-align:center;
-cursor:pointer;
-}
-
-.event{
-margin:15px 0;
-padding:16px;
-border-radius:18px;
-background:linear-gradient(135deg,#321d00,#171006);
-border:1px solid #e4b300;
-}
-
-.event h3{
-color:#ffd000;
-margin-top:0;
-}
-
-.old{
-text-decoration:line-through;
-color:#8793a1;
-margin-left:7px;
-}
-
-.new{
-color:#4df28a;
-font-weight:bold;
-font-size:18px;
-}
-
-.event .offer{
-border-color:#665014;
-}
-
-.badge{
-display:inline-block;
-background:#d69c00;
-color:#171000;
-padding:6px 10px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-}
-
-form{
-background:#0c1d34;
-padding:18px;
-border-radius:20px;
-margin-top:25px;
-border:1px solid #294968;
-}
-
-label{
-display:block;
-margin:12px 0 6px;
-}
-
-input,select{
-width:100%;
-padding:13px;
-border-radius:11px;
-border:1px solid #34516d;
-background:#050d18;
-color:white;
-font-size:15px;
+.payment-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
 }
 
 .payment{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+  padding:10px 15px;
+  border-radius:12px;
+  background:#13263d;
+  border:1px solid #2b4564;
 }
 
-.pay{
-padding:13px;
-text-align:center;
-background:#07182b;
-border:1px solid #36516c;
-border-radius:12px;
-}
-
-.note{
-margin-top:12px;
-padding:12px;
-background:#241d08;
-border:1px solid #665314;
-border-radius:12px;
-color:#ffe36b;
-font-size:13px;
-line-height:1.7;
-}
-
-.soon-box{
-text-align:center;
-padding:25px;
-background:#101c2b;
-border:1px dashed #61758a;
-border-radius:20px;
+.notice{
+  margin-top:18px;
+  padding:14px;
+  border-radius:13px;
+  background:#10263b;
+  color:#b9cce0;
+  line-height:1.8;
+  font-size:14px;
+  text-align:center;
 }
 
 footer{
-text-align:center;
-color:#8da1b7;
-padding:25px 10px;
+  text-align:center;
+  color:#8295ab;
+  padding:25px 10px;
+  border-top:1px solid #1d2d42;
 }
 
-@media(max-width:500px){
-header h1{font-size:23px}
-.payment{grid-template-columns:1fr}
+/* نافذة التطبيق */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(0,0,0,.82);
+  padding:15px;
+  overflow:auto;
+}
+
+.modal-box{
+  width:min(560px,100%);
+  margin:25px auto;
+  padding:21px;
+  border-radius:23px;
+  background:#0c192b;
+  border:1px solid #315071;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.close{
+  float:left;
+  border:0;
+  background:#27394f;
+  color:#fff;
+  border-radius:10px;
+  padding:8px 12px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.modal-title{
+  margin:5px 35px 18px 0;
+}
+
+.offers{
+  display:grid;
+  gap:11px;
+}
+
+.offer{
+  padding:15px;
+  border-radius:15px;
+  background:#101f33;
+  border:1px solid #29425f;
+}
+
+.offer-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.offer-name{
+  font-size:17px;
+  font-weight:bold;
+}
+
+.price{
+  color:#52d9ff;
+  font-size:18px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.old-price{
+  color:#7d8da0;
+  text-decoration:line-through;
+  font-size:13px;
+  margin-left:5px;
+}
+
+.event{
+  display:inline-block;
+  margin-bottom:8px;
+  padding:5px 9px;
+  border-radius:8px;
+  background:#8d271f;
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.buy-offer{
+  width:100%;
+  border:0;
+  border-radius:11px;
+  padding:11px;
+  margin-top:12px;
+  background:linear-gradient(90deg,#00a878,#00d68b);
+  color:#fff;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.form{
+  display:none;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid #263d58;
+}
+
+label{
+  display:block;
+  margin:13px 0 7px;
+  color:#d7e4f3;
+  font-weight:bold;
+}
+
+input,
+select{
+  width:100%;
+  padding:13px;
+  border-radius:12px;
+  border:1px solid #38516f;
+  background:#07111f;
+  color:#fff;
+  outline:none;
+  font-size:15px;
+}
+
+input:focus,
+select:focus{
+  border-color:#42d8ff;
+}
+
+.payment-choice{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+  margin-top:8px;
+}
+
+.payment-choice label{
+  margin:0;
+  padding:12px;
+  border:1px solid #2d4662;
+  border-radius:11px;
+  background:#101f33;
+  cursor:pointer;
+  text-align:center;
+  font-weight:bold;
+}
+
+.payment-choice input{
+  width:auto;
+  margin-left:6px;
+}
+
+.send{
+  width:100%;
+  margin-top:17px;
+  padding:14px;
+  border:0;
+  border-radius:13px;
+  background:#20c76f;
+  color:#fff;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.back{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  border:1px solid #34506d;
+  border-radius:12px;
+  background:#17283d;
+  color:#fff;
+  cursor:pointer;
+}
+
+.empty{
+  padding:20px;
+  text-align:center;
+  color:#aabbd0;
+}
+
+/* الهاتف */
+
+@media(max-width:520px){
+
+  .logo{
+    font-size:23px;
+  }
+
+  .hero h1{
+    font-size:24px;
+  }
+
+  .apps{
+    grid-template-columns:repeat(2,1fr);
+    gap:11px;
+  }
+
+  .app-card{
+    min-height:205px;
+    padding:14px 9px;
+  }
+
+  .app-icon{
+    width:68px;
+    height:68px;
+    font-size:34px;
+  }
+
+  .app-card h3{
+    font-size:15px;
+  }
+
+  .btn{
+    font-size:13px;
+  }
+
+  .payment-choice{
+    grid-template-columns:1fr;
+  }
+
+  .offer-top{
+    align-items:flex-start;
+    flex-direction:column;
+  }
 }
 </style>
 </head>
@@ -258,91 +439,642 @@ header h1{font-size:23px}
 <body>
 
 <header>
-<h1>🇩🇿 rahimdz27</h1>
-<p>🎮 شحن ألعاب وباقات وشراء من مواقع</p>
-<p>📱 واتساب: <b>+213 662 942 215</b></p>
+  <div class="logo">🇩🇿 rahimdz27</div>
+
+  <div class="header-text">
+    🎮 شحن ألعاب وباقات وشراء من المواقع
+    <br>
+    📱 واتساب:
+    <span class="whatsapp">+213 662 942 215</span>
+  </div>
 </header>
 
 <main class="container">
 
-<!-- الصفحة الرئيسية -->
+  <section class="hero">
+    <div class="flag">🇩🇿</div>
 
-<section id="home" class="page active">
+    <h1>شحن ألعاب وباقات وشراء من المواقع</h1>
 
-<div class="hero">
-<h2>🇩🇿 مرحباً بكم في rahimdz27</h2>
-<p>
-اختر التطبيق الذي تريد شحنه،
-ثم ادخل إليه لمشاهدة الكميات والأسعار والعروض.
-</p>
+    <p>
+      اختر التطبيق ثم شاهد الكمية والسعر واختر العرض المناسب لك.
+    </p>
+  </section>
+
+  <section>
+
+    <div class="section-title">
+      <h2>📱 التطبيقات</h2>
+      <p>اضغط على التطبيق لمشاهدة العروض والأسعار</p>
+    </div>
+
+    <div class="apps" id="apps"></div>
+
+  </section>
+
+  <section class="payment-section">
+
+    <div class="section-title">
+      <h2>💳 طرق الدفع</h2>
+      <p>اختر طريقة الدفع عند إرسال الطلب</p>
+    </div>
+
+    <div class="payment-list">
+      <div class="payment">💵 فليكسي</div>
+      <div class="payment">🏦 CCP / ECCP</div>
+    </div>
+
+    <div class="notice">
+      🔐 لا نطلب كلمة مرور حسابك.
+      <br>
+      فقط ID أو اسم المستخدم لإتمام طلب الشحن.
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 rahimdz27 🇩🇿 — جميع الحقوق محفوظة
+</footer>
+
+
+<!-- نافذة التطبيق -->
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeModal()">✕</button>
+
+    <h2 class="modal-title" id="modalTitle">
+      عروض التطبيق
+    </h2>
+
+    <div class="offers" id="offers"></div>
+
+    <!-- نموذج الطلب -->
+
+    <div class="form" id="orderForm">
+
+      <h3>🛒 إتمام الطلب</h3>
+
+      <label for="accountId">
+        ID / اسم المستخدم
+      </label>
+
+      <input
+        id="accountId"
+        type="text"
+        placeholder="مثال: 123456789"
+      >
+
+      <label>
+        التطبيق
+      </label>
+
+      <input
+        id="selectedApp"
+        type="text"
+        readonly
+      >
+
+      <label>
+        العرض المختار
+      </label>
+
+      <input
+        id="selectedOffer"
+        type="text"
+        readonly
+      >
+
+      <label>
+        طريقة الدفع
+      </label>
+
+      <div class="payment-choice">
+
+        <label>
+          <input
+            type="radio"
+            name="payment"
+            value="فليكسي"
+            checked
+          >
+          💵 فليكسي
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="payment"
+            value="CCP / ECCP"
+          >
+          🏦 CCP / ECCP
+        </label>
+
+      </div>
+
+      <button class="send" onclick="sendOrder()">
+        📲 إرسال الطلب عبر واتساب
+      </button>
+
+      <button class="back" onclick="hideForm()">
+        ↩️ اختيار عرض آخر
+      </button>
+
+    </div>
+
+    <div class="notice">
+      بعد إرسال الطلب سيتم فتح واتساب لإتمام التواصل وتأكيد الطلب.
+    </div>
+
+  </div>
+
 </div>
 
-<h2 class="title">📱 التطبيقات</h2>
 
-<div class="apps">
+<script>
 
-<div class="app" onclick="openApp('efootball')">
-<div class="app-icon">⚽</div>
-<h3>eFootball</h3>
-<small class="available">متوفر الآن</small>
-</div>
+/* ================================
+   بيانات التطبيقات والأسعار
+================================ */
 
-<div class="app" onclick="openApp('pubg')">
-<div class="app-icon">🎯</div>
-<h3>PUBG Mobile</h3>
-<small class="available">متوفر الآن</small>
-</div>
+const apps = [
 
-<div class="app" onclick="openApp('freefire')">
-<div class="app-icon">💎</div>
-<h3>Free Fire</h3>
-<small class="available">متوفر الآن</small>
-</div>
+  {
+    name:"eFootball / PES",
+    icon:"⚽",
+    description:"شحن Coins",
+    offers:[
+      {
+        label:"130 كوينز",
+        oldPrice:"400 دج",
+        price:"360 دج",
+        event:true
+      },
+      {
+        label:"300 كوينز",
+        oldPrice:"750 دج",
+        price:"675 دج",
+        event:true
+      },
+      {
+        label:"550 كوينز",
+        oldPrice:"1400 دج",
+        price:"1260 دج",
+        event:true
+      },
+      {
+        label:"750 كوينز",
+        oldPrice:"1800 دج",
+        price:"1620 دج",
+        event:true
+      },
+      {
+        label:"1040 كوينز",
+        oldPrice:"2400 دج",
+        price:"2160 دج",
+        event:true
+      }
+    ]
+  },
 
-<div class="app" onclick="openSoon('TikTok')">
-<div class="app-icon">🎵</div>
-<h3>TikTok</h3>
-<small class="soon">متوفر عن قريب</small>
-</div>
+  {
+    name:"PUBG Mobile",
+    icon:"🎮",
+    description:"شحن UC",
+    offers:[
+      {
+        label:"30 UC",
+        price:"300 دج"
+      },
+      {
+        label:"60 UC",
+        price:"380 دج"
+      },
+      {
+        label:"300 UC + 25",
+        price:"1100 دج"
+      },
+      {
+        label:"600 UC + 60",
+        price:"1600 دج"
+      },
+      {
+        label:"1500 UC + 300",
+        price:"3600 دج"
+      }
+    ]
+  },
 
-<div class="app" onclick="openSoon('Netflix')">
-<div class="app-icon">📺</div>
-<h3>Netflix</h3>
-<small class="soon">متوفر عن قريب</small>
-</div>
+  {
+    name:"Free Fire",
+    icon:"🔥",
+    description:"شحن Diamonds",
+    offers:[
+      {
+        label:"100 💎",
+        price:"400 دج"
+      },
+      {
+        label:"310 💎",
+        price:"950 دج"
+      },
+      {
+        label:"520 💎",
+        price:"1450 دج"
+      },
+      {
+        label:"1060 💎",
+        price:"2700 دج"
+      }
+    ]
+  },
 
-<div class="app" onclick="openSoon('Tengo Live')">
-<div class="app-icon">📱</div>
-<h3>Tengo Live</h3>
-<small class="soon">متوفر عن قريب</small>
-</div>
+  {
+    name:"TikTok",
+    icon:"🎵",
+    description:"متوفر عن قريب",
+    soon:true,
+    offers:[]
+  },
 
-<div class="app" onclick="openSoon('Ludo')">
-<div class="app-icon">🎲</div>
-<h3>Ludo</h3>
-<small class="soon">متوفر عن قريب</small>
-</div>
+  {
+    name:"Netflix",
+    icon:"🎬",
+    description:"متوفر عن قريب",
+    soon:true,
+    offers:[]
+  },
 
-<div class="app" onclick="openSoon('AliExpress')">
-<div class="app-icon">🛒</div>
-<h3>AliExpress</h3>
-<small class="soon">متوفر عن قريب</small>
-</div>
+  {
+    name:"Tengo Live",
+    icon:"📺",
+    description:"متوفر عن قريب",
+    soon:true,
+    offers:[]
+  },
 
-<div class="app" onclick="openSoon('TEMU')">
-<div class="app-icon">🛍️</div>
-<h3>TEMU</h3>
-<small class="soon">متوفر عن قريب</small>
-</div>
+  {
+    name:"Ludo",
+    icon:"🎲",
+    description:"متوفر عن قريب",
+    soon:true,
+    offers:[]
+  },
 
-</div>
-</section>
+  {
+    name:"AliExpress",
+    icon:"🛒",
+    description:"متوفر عن قريب",
+    soon:true,
+    offers:[]
+  },
+
+  {
+    name:"TEMU",
+    icon:"🛍️",
+    description:"متوفر عن قريب",
+    soon:true,
+    offers:[]
+  }
+
+];
 
 
-<!-- eFootball -->
+/* ================================
+   عناصر الصفحة
+================================ */
 
-<section id="efootball" class="page">
+const appsBox =
+  document.getElementById("apps");
 
-<div class="back" onclick="home()">⬅️ العودة للتطبيقات</div>
+const modal =
+  document.getElementById("modal");
 
-<h2 class="
+const modalTitle =
+  document.getElementById("modalTitle");
+
+const offersBox =
+  document.getElementById("offers");
+
+const orderForm =
+  document.getElementById("orderForm");
+
+const accountId =
+  document.getElementById("accountId");
+
+const selectedAppInput =
+  document.getElementById("selectedApp");
+
+const selectedOfferInput =
+  document.getElementById("selectedOffer");
+
+let selectedApp = "";
+let selectedOffer = "";
+
+
+/* ================================
+   عرض التطبيقات
+================================ */
+
+apps.forEach((app,index)=>{
+
+  const card =
+    document.createElement("div");
+
+  card.className = "app-card";
+
+  card.innerHTML = `
+
+    <div class="app-icon">
+      ${app.icon}
+    </div>
+
+    <div>
+      <h3>${app.name}</h3>
+
+      <small>
+        ${app.description}
+      </small>
+    </div>
+
+    <button
+      class="btn ${app.soon ? "soon" : ""}"
+      onclick="openApp(${index})"
+    >
+      ${app.soon ? "متوفر عن قريب" : "📦 عرض الأسعار"}
+    </button>
+
+  `;
+
+  appsBox.appendChild(card);
+
+});
+
+
+/* ================================
+   فتح التطبيق
+================================ */
+
+function openApp(index){
+
+  const app = apps[index];
+
+  selectedApp = app.name;
+
+  modalTitle.textContent =
+    "📦 عروض " + app.name;
+
+  offersBox.innerHTML = "";
+
+  orderForm.style.display = "none";
+
+  if(app.soon){
+
+    offersBox.innerHTML = `
+
+      <div class="empty">
+
+        <div style="font-size:45px">
+          ⏳
+        </div>
+
+        <h3>
+          ${app.name}
+        </h3>
+
+        <p>
+          الخدمة متوفرة عن قريب إن شاء الله 🇩🇿
+        </p>
+
+      </div>
+
+    `;
+
+    modal.style.display = "block";
+
+    return;
+  }
+
+
+  /* إنشاء العروض */
+
+  app.offers.forEach((offer)=>{
+
+    const row =
+      document.createElement("div");
+
+    row.className = "offer";
+
+
+    let eventHTML = "";
+
+    if(offer.event){
+
+      eventHTML = `
+        <span class="event">
+          🔥 عرض مناسبات / حدث جديد
+        </span>
+      `;
+
+    }
+
+
+    let priceHTML = "";
+
+    if(offer.oldPrice){
+
+      priceHTML = `
+
+        <span class="price">
+
+          <span class="old-price">
+            ${offer.oldPrice}
+          </span>
+
+          ${offer.price}
+
+        </span>
+
+      `;
+
+    }else{
+
+      priceHTML = `
+        <span class="price">
+          ${offer.price}
+        </span>
+      `;
+
+    }
+
+
+    row.innerHTML = `
+
+      ${eventHTML}
+
+      <div class="offer-top">
+
+        <div class="offer-name">
+          🎁 ${offer.label}
+        </div>
+
+        ${priceHTML}
+
+      </div>
+
+      <button
+        class="buy-offer"
+        onclick='chooseOffer(${JSON.stringify(
+          offer.label + " — " + offer.price
+        )})'
+      >
+        🛒 شراء هذا العرض
+      </button>
+
+    `;
+
+    offersBox.appendChild(row);
+
+  });
+
+
+  modal.style.display = "block";
+
+}
+
+
+/* ================================
+   اختيار العرض
+================================ */
+
+function chooseOffer(offer){
+
+  selectedOffer = offer;
+
+  selectedAppInput.value =
+    selectedApp;
+
+  selectedOfferInput.value =
+    selectedOffer;
+
+  orderForm.style.display =
+    "block";
+
+  setTimeout(()=>{
+    accountId.focus();
+  },100);
+
+}
+
+
+/* ================================
+   إخفاء نموذج الطلب
+================================ */
+
+function hideForm(){
+
+  orderForm.style.display =
+    "none";
+
+}
+
+
+/* ================================
+   إغلاق النافذة
+================================ */
+
+function closeModal(){
+
+  modal.style.display =
+    "none";
+
+  orderForm.style.display =
+    "none";
+
+  accountId.value = "";
+
+}
+
+
+/* إغلاق عند الضغط خارج النافذة */
+
+window.addEventListener(
+  "click",
+  function(event){
+
+    if(event.target === modal){
+
+      closeModal();
+
+    }
+
+  }
+);
+
+
+/* ================================
+   إرسال الطلب إلى واتساب
+================================ */
+
+function sendOrder(){
+
+  const id =
+    accountId.value.trim();
+
+  if(!id){
+
+    alert(
+      "من فضلك اكتب ID أو اسم المستخدم."
+    );
+
+    accountId.focus();
+
+    return;
+  }
+
+
+  const payment =
+    document.querySelector(
+      'input[name="payment"]:checked'
+    ).value;
+
+
+  const message =
+
+`🇩🇿 طلب جديد من متجر rahimdz27
+
+🎮 التطبيق:
+${selectedApp}
+
+🎁 العرض:
+${selectedOffer}
+
+🆔 ID / اسم المستخدم:
+${id}
+
+💳 طريقة الدفع:
+${payment}
+
+📱 أريد تأكيد الطلب.`;
+
+
+  const whatsappURL =
+    "https://wa.me/213662942215?text="
+    + encodeURIComponent(message);
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+}
+
+</script>
+
+</body>
+</html>
