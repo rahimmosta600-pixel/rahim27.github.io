@@ -2,269 +2,255 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>متجر عبد الرحيم للشحن</title>
+<title>rahimdz27 | شحن ألعاب وباقات وشراء من مواقع 🇩🇿</title>
+
+<meta name="description"
+content="rahimdz27 🇩🇿 متجر شحن ألعاب وباقات وشراء من مواقع. eFootball وPUBG Mobile وFree Fire.">
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  font-family:Arial,Tahoma,sans-serif;
-  background:linear-gradient(135deg,#030712,#071a33,#101827);
-  color:white;
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+background:linear-gradient(135deg,#020617,#071a33);
+color:#fff;
 }
 
 header{
-  background:linear-gradient(135deg,#07111f,#13294b);
-  padding:20px 12px;
-  text-align:center;
-  border-bottom:2px solid #ffd900;
-  position:sticky;
-  top:0;
-  z-index:100;
+text-align:center;
+padding:22px 12px;
+background:#081426;
+border-bottom:2px solid #ffd000;
+position:sticky;
+top:0;
+z-index:10;
 }
 
 header h1{
-  margin:0;
-  color:#ffd900;
-  font-size:27px;
+margin:0;
+font-size:28px;
+color:#ffd000;
 }
 
-header p{
-  margin:7px 0 0;
-  color:#dce8f7;
-}
-
-.whatsapp{
-  color:#39ed78;
-  font-weight:bold;
-}
+header p{margin:8px 0;color:#d9e5f3}
 
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px 12px 50px;
+max-width:900px;
+margin:auto;
+padding:18px 12px 50px;
 }
 
 .hero{
-  text-align:center;
-  padding:25px 15px;
-  margin-bottom:25px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#10284a,#071321);
-  border:1px solid #31557d;
+text-align:center;
+padding:25px 15px;
+border-radius:22px;
+background:#0c1d34;
+margin-bottom:25px;
 }
 
-.hero h2{
-  margin:0 0 10px;
-  color:#ffd900;
-  font-size:27px;
+.hero h2{color:#ffd000}
+
+.apps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:14px;
 }
 
-.hero p{
-  color:#c7d5e5;
-  line-height:1.8;
+.app{
+border:1px solid #294968;
+background:#0d2038;
+border-radius:20px;
+padding:18px 10px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
 }
 
-.badges{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:8px;
+.app:hover{transform:translateY(-3px)}
+
+.app-icon{
+font-size:50px;
+margin-bottom:8px;
 }
 
-.badge{
-  background:#101f35;
-  border:1px solid #426486;
-  padding:9px 13px;
-  border-radius:20px;
-  font-size:13px;
+.app h3{margin:5px 0}
+
+.app small{
+color:#aebed0;
+}
+
+.available{
+color:#49ed83;
+}
+
+.soon{
+color:#ffd000;
+}
+
+.page{
+display:none;
+}
+
+.page.active{
+display:block;
+}
+
+.back{
+display:block;
+margin-bottom:15px;
+background:#172b45;
+color:white;
+padding:12px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
 }
 
 .title{
-  color:#ffd900;
-  margin:28px 0 15px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:18px;
-}
-
-.card{
-  background:linear-gradient(145deg,#122744,#08121f);
-  border:1px solid #315170;
-  border-radius:22px;
-  padding:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.icon{
-  height:110px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  border-radius:18px;
-  background:linear-gradient(135deg,#165bc5,#5b27a5);
-  font-size:55px;
-  margin-bottom:15px;
-}
-
-.card h3{
-  text-align:center;
-  margin:5px 0;
-  font-size:23px;
-}
-
-.subtitle{
-  text-align:center;
-  color:#aebfd2;
-  margin-bottom:15px;
+color:#ffd000;
+margin:18px 0;
 }
 
 .offer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px;
-  margin:8px 0;
-  background:#050d18;
-  border:1px solid #294663;
-  border-radius:13px;
-}
-
-.offer span{
-  color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+background:#07111f;
+border:1px solid #294663;
+border-radius:14px;
+padding:13px;
+margin:8px 0;
 }
 
 .offer strong{
-  color:#ffd900;
-  font-size:18px;
+color:#ffd000;
+font-size:18px;
 }
 
 .buy{
-  display:block;
-  width:100%;
-  text-align:center;
-  text-decoration:none;
-  color:white;
-  background:linear-gradient(90deg,#13c968,#078f4c);
-  padding:13px;
-  border-radius:13px;
-  margin-top:13px;
-  font-weight:bold;
+display:block;
+width:100%;
+padding:13px;
+margin-top:14px;
+border:0;
+border-radius:13px;
+background:#13c968;
+color:white;
+font-weight:bold;
+font-size:16px;
+text-decoration:none;
+text-align:center;
+cursor:pointer;
 }
 
-.buy:hover{
-  opacity:.85;
+.event{
+margin:15px 0;
+padding:16px;
+border-radius:18px;
+background:linear-gradient(135deg,#321d00,#171006);
+border:1px solid #e4b300;
 }
 
-.wait{
-  text-align:center;
-  background:linear-gradient(145deg,#151f2d,#0a111b);
-  border:1px dashed #64778d;
-  border-radius:20px;
-  padding:22px;
+.event h3{
+color:#ffd000;
+margin-top:0;
 }
 
-.wait .smallicon{
-  font-size:45px;
+.old{
+text-decoration:line-through;
+color:#8793a1;
+margin-left:7px;
 }
 
-.wait h3{
-  margin:10px 0;
+.new{
+color:#4df28a;
+font-weight:bold;
+font-size:18px;
 }
 
-.wait p{
-  color:#aebdcd;
+.event .offer{
+border-color:#665014;
 }
 
-.status{
-  display:inline-block;
-  padding:7px 12px;
-  border-radius:20px;
-  background:#3a2d08;
-  color:#ffd900;
-  font-size:13px;
+.badge{
+display:inline-block;
+background:#d69c00;
+color:#171000;
+padding:6px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
 }
 
-.order{
-  margin-top:30px;
-  background:linear-gradient(145deg,#102641,#07111d);
-  border:1px solid #365b7e;
-  border-radius:22px;
-  padding:20px;
-}
-
-.order h2{
-  color:#ffd900;
-  margin-top:0;
+form{
+background:#0c1d34;
+padding:18px;
+border-radius:20px;
+margin-top:25px;
+border:1px solid #294968;
 }
 
 label{
-  display:block;
-  margin:12px 0 6px;
+display:block;
+margin:12px 0 6px;
 }
 
 input,select{
-  width:100%;
-  padding:13px;
-  border-radius:12px;
-  border:1px solid #34516d;
-  background:#050d18;
-  color:white;
-  font-size:15px;
+width:100%;
+padding:13px;
+border-radius:11px;
+border:1px solid #34516d;
+background:#050d18;
+color:white;
+font-size:15px;
 }
 
 .payment{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  margin-top:10px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
 }
 
 .pay{
-  padding:14px;
-  text-align:center;
-  border-radius:13px;
-  background:#0b1b2e;
-  border:1px solid #36516c;
+padding:13px;
+text-align:center;
+background:#07182b;
+border:1px solid #36516c;
+border-radius:12px;
 }
 
 .note{
-  margin-top:14px;
-  padding:12px;
-  border-radius:12px;
-  color:#ffe36b;
-  background:#211b08;
-  border:1px solid #665314;
-  line-height:1.7;
-  font-size:13px;
+margin-top:12px;
+padding:12px;
+background:#241d08;
+border:1px solid #665314;
+border-radius:12px;
+color:#ffe36b;
+font-size:13px;
+line-height:1.7;
+}
+
+.soon-box{
+text-align:center;
+padding:25px;
+background:#101c2b;
+border:1px dashed #61758a;
+border-radius:20px;
 }
 
 footer{
-  text-align:center;
-  color:#91a5bb;
-  padding:25px 10px;
+text-align:center;
+color:#8da1b7;
+padding:25px 10px;
 }
 
 @media(max-width:500px){
-  header h1{
-    font-size:22px;
-  }
-
-  .hero h2{
-    font-size:23px;
-  }
-
-  .payment{
-    grid-template-columns:1fr;
-  }
+header h1{font-size:23px}
+.payment{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -272,409 +258,91 @@ footer{
 <body>
 
 <header>
-
-<h1>👑 متجر عبد الرحيم للشحن ⚡</h1>
-
-<p>🎮 شحن الألعاب + شراء من المواقع</p>
-
-<p>
-واتساب:
-<span class="whatsapp">+213 662 942 215</span>
-</p>
-
+<h1>🇩🇿 rahimdz27</h1>
+<p>🎮 شحن ألعاب وباقات وشراء من مواقع</p>
+<p>📱 واتساب: <b>+213 662 942 215</b></p>
 </header>
-
 
 <main class="container">
 
-<section class="hero">
+<!-- الصفحة الرئيسية -->
 
-<h2>🔥 عروض الشحن والأسعار 🔥</h2>
+<section id="home" class="page active">
 
+<div class="hero">
+<h2>🇩🇿 مرحباً بكم في rahimdz27</h2>
 <p>
-اختر اللعبة والعرض المناسب لك ثم اضغط على
-<strong>اطلب الآن</strong>
-للتواصل معنا عبر واتساب.
+اختر التطبيق الذي تريد شحنه،
+ثم ادخل إليه لمشاهدة الكميات والأسعار والعروض.
 </p>
-
-<div class="badges">
-
-<span class="badge">⚡ شحن سريع</span>
-
-<span class="badge">🛡️ خدمة مباشرة</span>
-
-<span class="badge">💳 فليكسي</span>
-
-<span class="badge">🏦 CCP / ECCP</span>
-
 </div>
 
+<h2 class="title">📱 التطبيقات</h2>
+
+<div class="apps">
+
+<div class="app" onclick="openApp('efootball')">
+<div class="app-icon">⚽</div>
+<h3>eFootball</h3>
+<small class="available">متوفر الآن</small>
+</div>
+
+<div class="app" onclick="openApp('pubg')">
+<div class="app-icon">🎯</div>
+<h3>PUBG Mobile</h3>
+<small class="available">متوفر الآن</small>
+</div>
+
+<div class="app" onclick="openApp('freefire')">
+<div class="app-icon">💎</div>
+<h3>Free Fire</h3>
+<small class="available">متوفر الآن</small>
+</div>
+
+<div class="app" onclick="openSoon('TikTok')">
+<div class="app-icon">🎵</div>
+<h3>TikTok</h3>
+<small class="soon">متوفر عن قريب</small>
+</div>
+
+<div class="app" onclick="openSoon('Netflix')">
+<div class="app-icon">📺</div>
+<h3>Netflix</h3>
+<small class="soon">متوفر عن قريب</small>
+</div>
+
+<div class="app" onclick="openSoon('Tengo Live')">
+<div class="app-icon">📱</div>
+<h3>Tengo Live</h3>
+<small class="soon">متوفر عن قريب</small>
+</div>
+
+<div class="app" onclick="openSoon('Ludo')">
+<div class="app-icon">🎲</div>
+<h3>Ludo</h3>
+<small class="soon">متوفر عن قريب</small>
+</div>
+
+<div class="app" onclick="openSoon('AliExpress')">
+<div class="app-icon">🛒</div>
+<h3>AliExpress</h3>
+<small class="soon">متوفر عن قريب</small>
+</div>
+
+<div class="app" onclick="openSoon('TEMU')">
+<div class="app-icon">🛍️</div>
+<h3>TEMU</h3>
+<small class="soon">متوفر عن قريب</small>
+</div>
+
+</div>
 </section>
-
-
-<h2 class="title">🎮 الألعاب المتوفرة الآن</h2>
-
-
-<section class="grid">
 
 
 <!-- eFootball -->
 
-<article class="card">
+<section id="efootball" class="page">
 
-<div class="icon">⚽</div>
+<div class="back" onclick="home()">⬅️ العودة للتطبيقات</div>
 
-<h3>eFootball / PES</h3>
-
-<div class="subtitle">🪙 عروض الكويز</div>
-
-
-<div class="offer">
-<span>130 كويز</span>
-<strong>400 دج</strong>
-</div>
-
-<div class="offer">
-<span>300 كويز</span>
-<strong>750 دج</strong>
-</div>
-
-<div class="offer">
-<span>550 كويز</span>
-<strong>1400 دج</strong>
-</div>
-
-<div class="offer">
-<span>750 كويز</span>
-<strong>1800 دج</strong>
-</div>
-
-<div class="offer">
-<span>1040 كويز</span>
-<strong>2400 دج</strong>
-</div>
-
-
-<a class="buy"
-href="https://wa.me/213662942215?text=السلام%20عليكم%20أريد%20شحن%20eFootball"
-target="_blank">
-
-🛒 اطلب شحن eFootball
-
-</a>
-
-</article>
-
-
-
-<!-- PUBG -->
-
-<article class="card">
-
-<div class="icon">🎯</div>
-
-<h3>PUBG Mobile</h3>
-
-<div class="subtitle">🪙 عروض UC</div>
-
-
-<div class="offer">
-<span>30 UC</span>
-<strong>300 دج</strong>
-</div>
-
-<div class="offer">
-<span>60 UC</span>
-<strong>380 دج</strong>
-</div>
-
-<div class="offer">
-<span>300 UC + 25</span>
-<strong>1100 دج</strong>
-</div>
-
-<div class="offer">
-<span>600 UC + 60</span>
-<strong>1600 دج</strong>
-</div>
-
-<div class="offer">
-<span>1500 UC + 300</span>
-<strong>3600 دج</strong>
-</div>
-
-
-<a class="buy"
-href="https://wa.me/213662942215?text=السلام%20عليكم%20أريد%20شحن%20PUBG"
-target="_blank">
-
-🛒 اطلب شحن PUBG
-
-</a>
-
-</article>
-
-
-
-<!-- Free Fire -->
-
-<article class="card">
-
-<div class="icon">💎</div>
-
-<h3>Free Fire</h3>
-
-<div class="subtitle">💎 عروض الماسات</div>
-
-
-<div class="offer">
-<span>100 💎</span>
-<strong>400 دج</strong>
-</div>
-
-<div class="offer">
-<span>310 💎</span>
-<strong>950 دج</strong>
-</div>
-
-<div class="offer">
-<span>520 💎</span>
-<strong>1450 دج</strong>
-</div>
-
-<div class="offer">
-<span>1060 💎</span>
-<strong>2700 دج</strong>
-</div>
-
-
-<a class="buy"
-href="https://wa.me/213662942215?text=السلام%20عليكم%20أريد%20شحن%20Free%20Fire"
-target="_blank">
-
-🛒 اطلب شحن Free Fire
-
-</a>
-
-</article>
-
-</section>
-
-
-
-<h2 class="title">⏳ خدمات وتطبيقات أخرى</h2>
-
-
-<section class="grid">
-
-
-<div class="wait">
-
-<div class="smallicon">🎵</div>
-
-<h3>TikTok</h3>
-
-<span class="status">متوفر عن قريب</span>
-
-<p>خدمة الشحن ستكون متوفرة قريباً.</p>
-
-</div>
-
-
-<div class="wait">
-
-<div class="smallicon">📺</div>
-
-<h3>Netflix</h3>
-
-<span class="status">متوفر عن قريب</span>
-
-<p>الخدمة قيد التجهيز وستتوفر قريباً.</p>
-
-</div>
-
-
-<div class="wait">
-
-<div class="smallicon">📱</div>
-
-<h3>Tengo Live</h3>
-
-<span class="status">متوفر عن قريب</span>
-
-<p>الخدمة قيد التجهيز وستتوفر قريباً.</p>
-
-</div>
-
-
-<div class="wait">
-
-<div class="smallicon">🎲</div>
-
-<h3>Ludo</h3>
-
-<span class="status">متوفر عن قريب</span>
-
-<p>الخدمة قيد التجهيز وستتوفر قريباً.</p>
-
-</div>
-
-
-<div class="wait">
-
-<div class="smallicon">🛒</div>
-
-<h3>AliExpress</h3>
-
-<span class="status">متوفر عن قريب</span>
-
-<p>خدمة الشراء والشحن ستتوفر قريباً.</p>
-
-</div>
-
-
-<div class="wait">
-
-<div class="smallicon">🛍️</div>
-
-<h3>TEMU</h3>
-
-<span class="status">متوفر عن قريب</span>
-
-<p>خدمة الشراء والشحن ستتوفر قريباً.</p>
-
-</div>
-
-</section>
-
-
-
-<!-- نموذج الطلب -->
-
-<section class="order">
-
-<h2>📝 إرسال طلب شحن</h2>
-
-
-<label>🎮 اللعبة</label>
-
-<select id="game">
-
-<option>PUBG Mobile</option>
-
-<option>Free Fire</option>
-
-<option>eFootball / PES</option>
-
-</select>
-
-
-<label>🆔 ID اللاعب</label>
-
-<input
-id="player"
-type="text"
-placeholder="اكتب ID اللاعب هنا">
-
-
-<label>🎁 العرض المطلوب</label>
-
-<input
-id="offer"
-type="text"
-placeholder="مثال: 60 UC أو 310 ألماسة">
-
-
-<label>💳 طريقة الدفع</label>
-
-<div class="payment">
-
-<div class="pay">
-💳 فليكسي
-</div>
-
-<div class="pay">
-🏦 CCP / ECCP
-</div>
-
-</div>
-
-
-<div class="note">
-
-⚠️ لا ترسل كلمة مرور حسابك.
-أرسل فقط ID اللاعب والعرض المطلوب.
-
-</div>
-
-
-<a
-href="#"
-class="buy"
-onclick="sendOrder();return false;">
-
-📲 إرسال الطلب عبر واتساب
-
-</a>
-
-</section>
-
-</main>
-
-
-<footer>
-
-© 2026 متجر عبد الرحيم للشحن
-
-<br>
-
-📍 مستغانم - الجزائر
-
-<br>
-
-📱 WhatsApp: +213 662 942 215
-
-</footer>
-
-
-<script>
-
-function sendOrder(){
-
-const game =
-document.getElementById("game").value;
-
-const player =
-document.getElementById("player").value.trim();
-
-const offer =
-document.getElementById("offer").value.trim();
-
-
-if(player === "" || offer === ""){
-
-alert("من فضلك اكتب ID اللاعب والعرض المطلوب.");
-
-return;
-
-}
-
-
-const message =
-"السلام عليكم، أريد طلب شحن من متجر عبد الرحيم%0A" +
-"اللعبة: " + encodeURIComponent(game) + "%0A" +
-"ID اللاعب: " + encodeURIComponent(player) + "%0A" +
-"العرض: " + encodeURIComponent(offer);
-
-
-window.open(
-"https://wa.me/213662942215?text=" + message,
-"_blank"
-);
-
-}
-
-</script>
-
-</body>
-</html>
+<h2 class="
