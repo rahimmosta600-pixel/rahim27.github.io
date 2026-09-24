@@ -509,8 +509,8 @@ footer{
 <section>
 
 <div class="section-title">
-    <h2>🎮 الألعاب المتوفرة</h2>
-    <p>اختر اللعبة ثم اختر العرض الذي تريده</p>
+    <h2>🎮 الألعاب والتطبيقات المتوفرة</h2>
+    <p>اختر التطبيق ثم اختر العرض الذي تريده</p>
 </div>
 
 
@@ -691,19 +691,101 @@ footer{
     <h3>TikTok</h3>
 
     <div class="app-desc">
-        Coins حسب العرض
+        شحن TikTok Coins — عروض ثابتة
     </div>
 
     <div class="offers">
 
         <div class="offer">
             <div class="offer-line">
-                <span class="offer-name">Coins حسب العرض</span>
-                <span class="price">حسب العرض</span>
+                <span class="offer-name">12 Coins</span>
+                <span class="price">200 دج</span>
             </div>
 
             <button class="order-btn"
-            onclick="openComing('TikTok')">
+            onclick="openOrder('TikTok','12 Coins',200)">
+                طلب العرض
+            </button>
+        </div>
+
+
+        <div class="offer">
+            <div class="offer-line">
+                <span class="offer-name">117 Coins</span>
+                <span class="price">330 دج</span>
+            </div>
+
+            <button class="order-btn"
+            onclick="openOrder('TikTok','117 Coins',330)">
+                طلب العرض
+            </button>
+        </div>
+
+
+        <div class="offer">
+            <div class="offer-line">
+                <span class="offer-name">447 Coins</span>
+                <span class="price">850 دج</span>
+            </div>
+
+            <button class="order-btn"
+            onclick="openOrder('TikTok','447 Coins',850)">
+                طلب العرض
+            </button>
+        </div>
+
+
+        <div class="offer">
+            <div class="offer-line">
+                <span class="offer-name">897 Coins</span>
+                <span class="price">1500 دج</span>
+            </div>
+
+            <button class="order-btn"
+            onclick="openOrder('TikTok','897 Coins',1500)">
+                طلب العرض
+            </button>
+        </div>
+
+
+        <div class="offer">
+            <div class="offer-line">
+                <span class="offer-name">1697 Coins</span>
+                <span class="price">3000 دج</span>
+            </div>
+
+            <button class="order-btn"
+            onclick="openOrder('TikTok','1697 Coins',3000)">
+                طلب العرض
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- WHATSAPP -->
+<div class="app">
+
+    <div class="app-icon">💬</div>
+
+    <h3>WhatsApp</h3>
+
+    <div class="app-desc">
+        خدمات وعروض WhatsApp
+    </div>
+
+    <div class="offers">
+
+        <div class="offer">
+            <div class="offer-line">
+                <span class="offer-name">خدمة WhatsApp</span>
+                <span class="price">حسب الطلب</span>
+            </div>
+
+            <button class="order-btn"
+            onclick="openComing('WhatsApp')">
                 عرض التفاصيل
             </button>
         </div>
@@ -777,8 +859,9 @@ footer{
 
     <div class="section-title">
         <h2 style="color:white">💳 طرق الدفع</h2>
+
         <p style="color:#d7edff">
-            الدفع الحقيقي يتم عبر بوابة الدفع المرتبطة بالـBackend
+            طرق الدفع المتوفرة في المتجر
         </p>
     </div>
 
@@ -791,17 +874,17 @@ footer{
 
         <div class="payment">
             <strong>🔴 RedotPay</strong>
-            <span>عبر بوابة التاجر</span>
+            <span>دفع إلكتروني</span>
         </div>
 
         <div class="payment">
             <strong>🇩🇿 Barid Pay</strong>
-            <span>عند تفعيل حساب التاجر</span>
+            <span>دفع إلكتروني</span>
         </div>
 
         <div class="payment">
             <strong>📱 BaridiMob</strong>
-            <span>حسب بوابة الدفع المتاحة</span>
+            <span>دفع إلكتروني</span>
         </div>
 
     </div>
@@ -864,7 +947,7 @@ footer{
 
     <div class="field">
 
-        <label>اللعبة</label>
+        <label>التطبيق / اللعبة</label>
 
         <input
         id="game"
@@ -932,7 +1015,7 @@ footer{
 
     <button
     class="order-btn"
-    onclick="createPayment()">
+    onclick="showPaymentMessage()">
         💳 متابعة إلى الدفع
     </button>
 
@@ -941,13 +1024,13 @@ footer{
 
         <button
         class="pay-btn"
-        onclick="createPayment('visa')">
+        onclick="showPaymentMessage('visa')">
             💳 Visa
         </button>
 
         <button
         class="pay-btn redot"
-        onclick="createPayment('redotpay')">
+        onclick="showPaymentMessage('redotpay')">
             🔴 RedotPay
         </button>
 
@@ -955,9 +1038,8 @@ footer{
 
 
     <div class="note">
-        🔐 بيانات الدفع لا يتم حفظها داخل الموقع.
-        تتم عملية الدفع من خلال بوابة الدفع المرتبطة بالـBackend.
-        بعد تأكيد الدفع عبر Webhook يمكن للـBackend إرسال طلب الشحن تلقائيًا إلى مزود الشحن.
+        📢 اختر العرض والكمية ثم أدخل معلومات الحساب.
+        الأسعار المعروضة هي أسعار المتجر المحددة لكل عرض.
     </div>
 
 </div>
@@ -966,41 +1048,17 @@ footer{
 
 <script>
 
-/*
-====================================================
- rahimdz27 STORE
- الأسعار والكميات الأساسية ثابتة هنا.
- لا يتم تغييرها تلقائياً من مزود الشحن.
-====================================================
-*/
+/* YEAR */
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 
-/*
-====================================================
- رابط الـBackend الحقيقي
-
- بعد إنشاء السيرفر ضع رابط API الخاص بك هنا.
-
- مثال:
- https://api.rahimdz27.com
-
- لا تضع مفاتيح API السرية هنا.
-====================================================
-*/
-
-const BACKEND_URL = "https://YOUR-BACKEND-DOMAIN.com";
-
-
+/* CURRENT ORDER */
 let currentOrder = {
     game:"",
     offer:"",
     price:0
 };
-
-
-/* YEAR */
-document.getElementById("year").textContent =
-    new Date().getFullYear();
 
 
 /* OPEN ORDER */
@@ -1012,13 +1070,17 @@ function openOrder(game,offer,price){
         price:price
     };
 
-    document.getElementById("game").value = game;
+    document.getElementById("game").value =
+        game;
 
-    document.getElementById("offer").value = offer;
+    document.getElementById("offer").value =
+        offer;
 
-    document.getElementById("customerName").value = "";
+    document.getElementById("customerName").value =
+        "";
 
-    document.getElementById("playerId").value = "";
+    document.getElementById("playerId").value =
+        "";
 
     document.getElementById("quantityText").textContent =
         offer;
@@ -1034,7 +1096,7 @@ function openOrder(game,offer,price){
 }
 
 
-/* CLOSE */
+/* CLOSE MODAL */
 function closeModal(){
 
     document.getElementById("orderModal")
@@ -1042,7 +1104,7 @@ function closeModal(){
 }
 
 
-/* CLICK OUTSIDE */
+/* CLICK OUTSIDE MODAL */
 document.getElementById("orderModal")
 .addEventListener("click",function(e){
 
@@ -1053,95 +1115,19 @@ document.getElementById("orderModal")
 });
 
 
-/*
-====================================================
- PRODUCTS WITHOUT A FIXED PRICE
-====================================================
-*/
-
+/* COMING SOON */
 function openComing(game){
 
     alert(
-        "📢 عروض " + game +
-        " سيتم عرضها هنا بعد إضافة الكميات والأسعار المحددة."
+        "📢 عروض " +
+        game +
+        " سيتم إضافتها لاحقاً."
     );
 
 }
 
 
-/*
-====================================================
- CREATE PAYMENT
+/* PAYMENT MESSAGE */
+function showPaymentMessage(method=""){
 
- هذه الدالة جاهزة للربط مع Backend حقيقي.
-
- الـBackend يجب أن:
- 1. يستقبل بيانات الطلب.
- 2. يتحقق من السعر من قاعدة بياناته.
- 3. ينشئ جلسة الدفع لدى بوابة الدفع.
- 4. يعيد payment_url.
- 5. الموقع يحول الزبون إلى صفحة الدفع.
-
- مهم:
- السعر يجب أن يتم التحقق منه في Backend أيضاً،
- وليس الاعتماد على JavaScript وحده.
-====================================================
-*/
-
-async function createPayment(method=""){
-
-    const customerName =
-        document.getElementById("customerName")
-        .value.trim();
-
-    const playerId =
-        document.getElementById("playerId")
-        .value.trim();
-
-
-    if(!customerName){
-
-        alert("يرجى كتابة اسم الزبون.");
-
-        return;
-    }
-
-
-    if(!playerId){
-
-        alert("يرجى إدخال ID اللاعب.");
-
-        return;
-    }
-
-
-    const orderData = {
-
-        game: currentOrder.game,
-
-        offer: currentOrder.offer,
-
-        playerId: playerId,
-
-        customerName: customerName,
-
-        price: currentOrder.price,
-
-        currency: "DZD",
-
-        paymentMethod: method || "select"
-
-    };
-
-
-    /*
-    ------------------------------------------------
-    في الوضع الحالي Backend غير مربوط بعد.
-    ------------------------------------------------
-    */
-
-    if(
-        BACKEND_URL.includes("YOUR-BACKEND-DOMAIN")
-    ){
-
-        alert(
+    const cus
