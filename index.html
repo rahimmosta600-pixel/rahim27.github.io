@@ -4,1077 +4,1123 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>rahimdz27 | شحن ألعاب وباقات وشراء من المواقع 🇩🇿</title>
+<title>rahimdz27 | متجر الشحن السريع للألعاب والتطبيقات</title>
 
-<meta name="description" content="rahimdz27 متجر جزائري لشحن الألعاب والباقات والشراء من المواقع. PUBG Mobile وFree Fire وeFootball وPES.">
+<meta name="description" content="rahimdz27 متجر جزائري للشحن السريع للألعاب والتطبيقات، تفعيل البطاقات والشراء من المواقع عبر Visa وRedotPay.">
+<meta name="keywords" content="rahimdz27, شحن ألعاب, شحن PUBG, eFootball, PES, Free Fire, الجزائر, Visa, RedotPay">
+<meta name="author" content="rahimdz27">
+
+<meta name="theme-color" content="#087cff">
 
 <style>
 *{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,Arial,sans-serif;
 }
 
 body{
-  margin:0;
-  font-family:Arial,Tahoma,sans-serif;
-  background:
-    radial-gradient(circle at top right,#12345c 0,#07111f 38%,#050b14 100%);
-  color:#fff;
-  min-height:100vh;
+    background:
+        radial-gradient(circle at top right,#dff1ff 0,#f7fbff 35%,#ffffff 70%);
+    color:#142033;
+    min-height:100vh;
 }
 
-button,
-input,
-select{
-  font-family:inherit;
+a{
+    text-decoration:none;
+    color:inherit;
 }
+
+button{
+    font-family:inherit;
+}
+
+/* ===== HEADER ===== */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:50;
-  padding:15px 12px;
-  text-align:center;
-  background:rgba(4,10,18,.96);
-  border-bottom:1px solid #263b55;
-  backdrop-filter:blur(12px);
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(145deg,#006ee6,#009dff);
+    color:white;
+    padding:25px 15px 70px;
+    border-bottom-left-radius:38px;
+    border-bottom-right-radius:38px;
+    box-shadow:0 12px 35px rgba(0,110,230,.22);
 }
 
-.logo{
-  font-size:27px;
-  font-weight:900;
-  color:#52d9ff;
-  margin-bottom:6px;
+header:before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+    left:-90px;
+    top:-100px;
 }
 
-.header-text{
-  color:#c9d8e8;
-  font-size:14px;
+header:after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    right:-70px;
+    bottom:-80px;
 }
 
-.whatsapp{
-  color:#4ee58b;
-  font-weight:bold;
+.top{
+    max-width:1050px;
+    margin:auto;
+    position:relative;
+    z-index:2;
 }
 
-.container{
-  width:min(1100px,94%);
-  margin:auto;
-  padding:20px 0 60px;
-}
+/* ===== FLAGS ===== */
 
-.hero{
-  text-align:center;
-  padding:25px 10px 30px;
+.flags{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:15px;
 }
 
 .flag{
-  font-size:45px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.25);
+    padding:7px 13px;
+    border-radius:50px;
+    backdrop-filter:blur(8px);
+    font-size:22px;
 }
 
-.hero h1{
-  margin:8px 0;
-  font-size:30px;
+/* ===== PROFILE ===== */
+
+.profile{
+    text-align:center;
 }
 
-.hero p{
-  color:#aebfd3;
-  line-height:1.8;
-  margin:0;
+.avatar{
+    width:105px;
+    height:105px;
+    border-radius:50%;
+    margin:auto;
+    background:linear-gradient(145deg,#ffffff,#dcefff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#087cff;
+    font-size:27px;
+    font-weight:900;
+    border:5px solid rgba(255,255,255,.65);
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
+
+.profile h1{
+    font-size:34px;
+    margin-top:14px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.profile .welcome{
+    font-size:16px;
+    margin:9px auto 0;
+    max-width:650px;
+    line-height:1.9;
+    color:#f4fbff;
+}
+
+.badges{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin-top:16px;
+}
+
+.badge{
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.28);
+    padding:7px 12px;
+    border-radius:30px;
+    font-size:13px;
+}
+
+/* ===== MAIN ===== */
+
+main{
+    max-width:1050px;
+    margin:-38px auto 40px;
+    padding:0 14px;
+    position:relative;
+    z-index:3;
+}
+
+/* ===== NOTICE ===== */
+
+.notice{
+    background:#fff;
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 12px 35px rgba(22,70,110,.10);
+    border:1px solid #e4f1fc;
+    margin-bottom:22px;
+}
+
+.notice-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:18px;
+    font-weight:900;
+    color:#0874df;
+    margin-bottom:10px;
+}
+
+.notice p{
+    line-height:1.9;
+    color:#526174;
+    font-size:14px;
+}
+
+.special{
+    margin-top:13px;
+    padding:13px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#eef8ff,#f8fcff);
+    border-right:4px solid #087cff;
+}
+
+.special strong{
+    color:#006ddd;
+}
+
+/* ===== SECTION TITLE ===== */
 
 .section-title{
-  text-align:center;
-  margin:20px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:25px 3px 14px;
 }
 
 .section-title h2{
-  margin:0 0 7px;
+    font-size:22px;
+    color:#17283e;
 }
 
-.section-title p{
-  margin:0;
-  color:#9fb1c6;
+.section-title span{
+    font-size:13px;
+    color:#6b7c91;
 }
+
+/* ===== APPS ===== */
 
 .apps{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
-  gap:16px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-.app-card{
-  min-height:220px;
-  padding:18px 14px;
-  border-radius:22px;
-  border:1px solid #29415e;
-  background:linear-gradient(145deg,#122238,#0b1626);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
-  text-align:center;
-  box-shadow:0 12px 35px rgba(0,0,0,.25);
-  transition:.2s;
+.app{
+    background:white;
+    border:1px solid #e5eef7;
+    border-radius:22px;
+    padding:17px;
+    box-shadow:0 9px 25px rgba(27,78,120,.08);
+    transition:.25s;
+    position:relative;
+    overflow:hidden;
 }
 
-.app-card:hover{
-  transform:translateY(-4px);
-  border-color:#43d8ff;
+.app:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 32px rgba(27,78,120,.14);
+}
+
+.app-top{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .app-icon{
-  width:82px;
-  height:82px;
-  border-radius:22px;
-  display:grid;
-  place-items:center;
-  font-size:42px;
-  background:linear-gradient(135deg,#126cff,#784bff);
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+    background:linear-gradient(145deg,#e8f5ff,#cfeaff);
+    flex-shrink:0;
 }
 
-.app-card h3{
-  margin:12px 0 5px;
-  font-size:18px;
+.app h3{
+    font-size:17px;
+    margin-bottom:5px;
 }
 
-.app-card small{
-  color:#94a9bf;
+.app small{
+    color:#718096;
+    font-size:12px;
 }
 
-.btn{
-  width:100%;
-  border:0;
-  border-radius:13px;
-  padding:12px;
-  margin-top:12px;
-  cursor:pointer;
-  font-weight:bold;
-  color:#fff;
-  background:linear-gradient(90deg,#007bff,#00b8d9);
+.status{
+    display:inline-block;
+    margin-top:12px;
+    background:#eaf8f0;
+    color:#159447;
+    padding:5px 9px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:bold;
 }
 
-.btn:hover{
-  opacity:.9;
+.status.soon{
+    background:#fff6df;
+    color:#b77900;
 }
 
-.soon{
-  opacity:.7;
-}
-
-.payment-section{
-  margin-top:35px;
-  padding:20px;
-  border-radius:20px;
-  border:1px solid #263d59;
-  background:#0c192a;
-}
-
-.payment-list{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-}
-
-.payment{
-  padding:10px 15px;
-  border-radius:12px;
-  background:#13263d;
-  border:1px solid #2b4564;
-}
-
-.notice{
-  margin-top:18px;
-  padding:14px;
-  border-radius:13px;
-  background:#10263b;
-  color:#b9cce0;
-  line-height:1.8;
-  font-size:14px;
-  text-align:center;
-}
-
-footer{
-  text-align:center;
-  color:#8295ab;
-  padding:25px 10px;
-  border-top:1px solid #1d2d42;
-}
-
-/* نافذة التطبيق */
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:100;
-  background:rgba(0,0,0,.82);
-  padding:15px;
-  overflow:auto;
-}
-
-.modal-box{
-  width:min(560px,100%);
-  margin:25px auto;
-  padding:21px;
-  border-radius:23px;
-  background:#0c192b;
-  border:1px solid #315071;
-  box-shadow:0 20px 60px rgba(0,0,0,.5);
-}
-
-.close{
-  float:left;
-  border:0;
-  background:#27394f;
-  color:#fff;
-  border-radius:10px;
-  padding:8px 12px;
-  cursor:pointer;
-  font-size:18px;
-}
-
-.modal-title{
-  margin:5px 35px 18px 0;
-}
+/* ===== OFFERS ===== */
 
 .offers{
-  display:grid;
-  gap:11px;
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
 
 .offer{
-  padding:15px;
-  border-radius:15px;
-  background:#101f33;
-  border:1px solid #29425f;
+    border:1px solid #e8eef4;
+    border-radius:14px;
+    padding:11px;
+    background:#fbfdff;
 }
 
-.offer-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
+.offer-line{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
 }
 
 .offer-name{
-  font-size:17px;
-  font-weight:bold;
+    font-size:13px;
+    font-weight:bold;
 }
 
 .price{
-  color:#52d9ff;
-  font-size:18px;
-  font-weight:900;
-  white-space:nowrap;
+    color:#087cff;
+    font-weight:900;
+    white-space:nowrap;
 }
 
-.old-price{
-  color:#7d8da0;
-  text-decoration:line-through;
-  font-size:13px;
-  margin-left:5px;
+.offer-info{
+    margin-top:5px;
+    font-size:11px;
+    color:#7a8797;
 }
 
-.event{
-  display:inline-block;
-  margin-bottom:8px;
-  padding:5px 9px;
-  border-radius:8px;
-  background:#8d271f;
-  color:#fff;
-  font-size:12px;
-  font-weight:bold;
+.order{
+    width:100%;
+    margin-top:10px;
+    border:none;
+    border-radius:12px;
+    padding:11px;
+    background:linear-gradient(135deg,#0075ed,#00a1ff);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
 }
 
-.buy-offer{
-  width:100%;
-  border:0;
-  border-radius:11px;
-  padding:11px;
-  margin-top:12px;
-  background:linear-gradient(90deg,#00a878,#00d68b);
-  color:#fff;
-  cursor:pointer;
-  font-weight:bold;
+.order:hover{
+    filter:brightness(.96);
+    transform:scale(.99);
 }
 
-.form{
-  display:none;
-  margin-top:20px;
-  padding-top:20px;
-  border-top:1px solid #263d58;
+/* ===== COMING SOON ===== */
+
+.coming{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-label{
-  display:block;
-  margin:13px 0 7px;
-  color:#d7e4f3;
-  font-weight:bold;
+.soon-card{
+    background:white;
+    border:1px solid #e8eef5;
+    border-radius:20px;
+    padding:22px 15px;
+    text-align:center;
+    box-shadow:0 8px 23px rgba(27,78,120,.06);
 }
 
-input,
-select{
-  width:100%;
-  padding:13px;
-  border-radius:12px;
-  border:1px solid #38516f;
-  background:#07111f;
-  color:#fff;
-  outline:none;
-  font-size:15px;
+.soon-icon{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-input:focus,
-select:focus{
-  border-color:#42d8ff;
+.soon-card h3{
+    font-size:16px;
 }
 
-.payment-choice{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:9px;
-  margin-top:8px;
+.soon-card p{
+    color:#7a8797;
+    font-size:12px;
+    margin-top:7px;
+    line-height:1.7;
 }
 
-.payment-choice label{
-  margin:0;
-  padding:12px;
-  border:1px solid #2d4662;
-  border-radius:11px;
-  background:#101f33;
-  cursor:pointer;
-  text-align:center;
-  font-weight:bold;
+/* ===== PAYMENT ===== */
+
+.payment{
+    background:linear-gradient(135deg,#071f3b,#073e73);
+    color:white;
+    border-radius:24px;
+    padding:23px;
+    margin-top:25px;
+    box-shadow:0 12px 35px rgba(5,43,78,.18);
 }
 
-.payment-choice input{
-  width:auto;
-  margin-left:6px;
+.payment h2{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.payment p{
+    color:#d9edff;
+    font-size:13px;
+    line-height:1.9;
+}
+
+.pay-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:14px;
+}
+
+.pay{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    padding:8px 13px;
+    font-size:12px;
+}
+
+/* ===== CONTACT ===== */
+
+.contact{
+    margin-top:25px;
+    background:white;
+    border-radius:23px;
+    padding:22px;
+    box-shadow:0 10px 28px rgba(27,78,120,.08);
+}
+
+.contact h2{
+    margin-bottom:7px;
+}
+
+.contact p{
+    color:#718096;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.contact-buttons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.contact-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    padding:12px;
+    border-radius:13px;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.whatsapp{
+    background:#eafaf0;
+    color:#168847;
+}
+
+.telegram{
+    background:#eaf5ff;
+    color:#087bdc;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:30px 15px 40px;
+    color:#718096;
+    font-size:12px;
+}
+
+footer strong{
+    color:#087cff;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,22,44,.65);
+    z-index:999;
+    padding:20px;
+    align-items:center;
+    justify-content:center;
+    backdrop-filter:blur(5px);
+}
+
+.modal-box{
+    width:100%;
+    max-width:460px;
+    background:white;
+    border-radius:25px;
+    padding:23px;
+    position:relative;
+    box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+
+.close{
+    position:absolute;
+    left:15px;
+    top:13px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    border:none;
+    background:#edf4fa;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.modal-box h2{
+    color:#087cff;
+    margin-bottom:8px;
+}
+
+.modal-box p{
+    color:#68788c;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.form-group{
+    margin-top:13px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #dce7f0;
+    border-radius:12px;
+    outline:none;
+    font-family:inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:#087cff;
 }
 
 .send{
-  width:100%;
-  margin-top:17px;
-  padding:14px;
-  border:0;
-  border-radius:13px;
-  background:#20c76f;
-  color:#fff;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
+    width:100%;
+    margin-top:16px;
+    padding:13px;
+    border:none;
+    border-radius:13px;
+    background:linear-gradient(135deg,#0074eb,#00a2ff);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.back{
-  width:100%;
-  margin-top:10px;
-  padding:12px;
-  border:1px solid #34506d;
-  border-radius:12px;
-  background:#17283d;
-  color:#fff;
-  cursor:pointer;
-}
+/* ===== RESPONSIVE ===== */
 
-.empty{
-  padding:20px;
-  text-align:center;
-  color:#aabbd0;
-}
+@media(max-width:800px){
+    .apps{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-/* الهاتف */
+    .coming{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
 @media(max-width:520px){
+    header{
+        padding-top:20px;
+        padding-bottom:65px;
+    }
 
-  .logo{
-    font-size:23px;
-  }
+    .profile h1{
+        font-size:28px;
+    }
 
-  .hero h1{
-    font-size:24px;
-  }
+    .profile .welcome{
+        font-size:14px;
+    }
 
-  .apps{
-    grid-template-columns:repeat(2,1fr);
-    gap:11px;
-  }
+    .apps,
+    .coming{
+        grid-template-columns:1fr;
+    }
 
-  .app-card{
-    min-height:205px;
-    padding:14px 9px;
-  }
+    main{
+        padding:0 10px;
+    }
 
-  .app-icon{
-    width:68px;
-    height:68px;
-    font-size:34px;
-  }
+    .contact-buttons{
+        grid-template-columns:1fr;
+    }
 
-  .app-card h3{
-    font-size:15px;
-  }
-
-  .btn{
-    font-size:13px;
-  }
-
-  .payment-choice{
-    grid-template-columns:1fr;
-  }
-
-  .offer-top{
-    align-items:flex-start;
-    flex-direction:column;
-  }
+    .avatar{
+        width:90px;
+        height:90px;
+        font-size:23px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🇩🇿 rahimdz27</div>
+<!-- ================= HEADER ================= -->
 
-  <div class="header-text">
-    🎮 شحن ألعاب وباقات وشراء من المواقع
-    <br>
-    📱 واتساب:
-    <span class="whatsapp">+213 662 942 215</span>
-  </div>
+<header>
+
+<div class="top">
+
+    <div class="flags">
+        <div class="flag">🇩🇿 الجزائر</div>
+        <div class="flag">🇵🇸 فلسطين</div>
+    </div>
+
+    <div class="profile">
+
+        <div class="avatar">
+            R27
+        </div>
+
+        <h1>rahimdz27</h1>
+
+        <div class="welcome">
+            مرحباً بكم في متجر <strong>rahimdz27</strong> 💙
+            <br>
+            شحن سريع للألعاب والتطبيقات • تفعيل البطاقات
+            • والشراء من المواقع عن طريق Visa أو RedotPay
+        </div>
+
+        <div class="badges">
+            <div class="badge">⚡ شحن سريع</div>
+            <div class="badge">🔒 خدمة موثوقة</div>
+            <div class="badge">💳 Visa</div>
+            <div class="badge">💙 RedotPay</div>
+        </div>
+
+    </div>
+
+</div>
+
 </header>
 
-<main class="container">
 
-  <section class="hero">
-    <div class="flag">🇩🇿</div>
+<!-- ================= MAIN ================= -->
 
-    <h1>شحن ألعاب وباقات وشراء من المواقع</h1>
+<main>
+
+<!-- NOTICE -->
+
+<section class="notice">
+
+    <div class="notice-title">
+        📢 عروض وتحديثات المتجر
+    </div>
 
     <p>
-      اختر التطبيق ثم شاهد الكمية والسعر واختر العرض المناسب لك.
+        لدينا عروض مناسبة للجميع لشحن الألعاب والتطبيقات.
+        يتم تحديث العروض والأسعار باستمرار حسب توفر الخدمات والتحديثات.
     </p>
-  </section>
 
-  <section>
-
-    <div class="section-title">
-      <h2>📱 التطبيقات</h2>
-      <p>اضغط على التطبيق لمشاهدة العروض والأسعار</p>
+    <div class="special">
+        <strong>⭐ عروض eFootball / PES الخاصة:</strong>
+        <br>
+        بعد كل تحديث للعبة نوفر عروضاً خاصة للاعبين والمدربين والكوينز.
+        <br><br>
+        🧑‍💻 اللاعب: <strong>300 دج</strong>
+        <br>
+        🧑‍🏫 المدرب: <strong>600 دج</strong>
+        <br>
+        💰 الكوينز: حسب العرض المتوفر بعد التحديث.
     </div>
 
-    <div class="apps" id="apps"></div>
-
-  </section>
-
-  <section class="payment-section">
-
-    <div class="section-title">
-      <h2>💳 طرق الدفع</h2>
-      <p>اختر طريقة الدفع عند إرسال الطلب</p>
-    </div>
-
-    <div class="payment-list">
-      <div class="payment">💵 فليكسي</div>
-      <div class="payment">🏦 CCP / ECCP</div>
-    </div>
-
-    <div class="notice">
-      🔐 لا نطلب كلمة مرور حسابك.
-      <br>
-      فقط ID أو اسم المستخدم لإتمام طلب الشحن.
-    </div>
-
-  </section>
-
-</main>
-
-<footer>
-  © 2026 rahimdz27 🇩🇿 — جميع الحقوق محفوظة
-</footer>
+</section>
 
 
-<!-- نافذة التطبيق -->
+<!-- AVAILABLE APPS -->
 
-<div class="modal" id="modal">
+<div class="section-title">
+    <h2>🎮 التطبيقات المتوفرة</h2>
+    <span>متوفر الآن ✅</span>
+</div>
 
-  <div class="modal-box">
 
-    <button class="close" onclick="closeModal()">✕</button>
+<div class="apps">
 
-    <h2 class="modal-title" id="modalTitle">
-      عروض التطبيق
-    </h2>
+    <!-- eFootball -->
 
-    <div class="offers" id="offers"></div>
+    <div class="app">
 
-    <!-- نموذج الطلب -->
+        <div class="app-top">
 
-    <div class="form" id="orderForm">
+            <div class="app-icon">
+                ⚽
+            </div>
 
-      <h3>🛒 إتمام الطلب</h3>
+            <div>
+                <h3>eFootball / PES</h3>
+                <small>شحن وعروض خاصة</small>
+            </div>
 
-      <label for="accountId">
-        ID / اسم المستخدم
-      </label>
+        </div>
 
-      <input
-        id="accountId"
-        type="text"
-        placeholder="مثال: 123456789"
-      >
+        <span class="status">
+            متوفر الآن ✅
+        </span>
 
-      <label>
-        التطبيق
-      </label>
+        <div class="offers">
 
-      <input
-        id="selectedApp"
-        type="text"
-        readonly
-      >
+            <div class="offer">
 
-      <label>
-        العرض المختار
-      </label>
+                <div class="offer-line">
+                    <span class="offer-name">
+                        🧑‍💻 لاعب
+                    </span>
 
-      <input
-        id="selectedOffer"
-        type="text"
-        readonly
-      >
+                    <span class="price">
+                        300 دج
+                    </span>
+                </div>
 
-      <label>
-        طريقة الدفع
-      </label>
+                <div class="offer-info">
+                    الكمية: لاعب واحد • المطلوب: ID الحساب
+                </div>
 
-      <div class="payment-choice">
+                <button
+                    class="order"
+                    onclick="openOrder('eFootball - لاعب','300 دج')">
+                    🛒 طلب العرض
+                </button>
 
-        <label>
-          <input
-            type="radio"
-            name="payment"
-            value="فليكسي"
-            checked
-          >
-          💵 فليكسي
-        </label>
+            </div>
 
-        <label>
-          <input
-            type="radio"
-            name="payment"
-            value="CCP / ECCP"
-          >
-          🏦 CCP / ECCP
-        </label>
 
-      </div>
+            <div class="offer">
 
-      <button class="send" onclick="sendOrder()">
-        📲 إرسال الطلب عبر واتساب
-      </button>
+                <div class="offer-line">
+                    <span class="offer-name">
+                        🧑‍🏫 مدرب
+                    </span>
 
-      <button class="back" onclick="hideForm()">
-        ↩️ اختيار عرض آخر
-      </button>
+                    <span class="price">
+                        600 دج
+                    </span>
+                </div>
+
+                <div class="offer-info">
+                    الكمية: مدرب واحد • المطلوب: ID الحساب
+                </div>
+
+                <button
+                    class="order"
+                    onclick="openOrder('eFootball - مدرب','600 دج')">
+                    🛒 طلب العرض
+                </button>
+
+            </div>
+
+
+            <div class="offer">
+
+                <div class="offer-line">
+                    <span class="offer-name">
+                        💰 كوينز
+                    </span>
+
+                    <span class="price">
+                        حسب العرض
+                    </span>
+                </div>
+
+                <div class="offer-info">
+                    عروض الكوينز تتغير حسب التحديث والتوفر.
+                </div>
+
+                <button
+                    class="order"
+                    onclick="openOrder('eFootball - كوينز','حسب العرض')">
+                    🛒 الاستفسار والطلب
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <div class="notice">
-      بعد إرسال الطلب سيتم فتح واتساب لإتمام التواصل وتأكيد الطلب.
+
+    <!-- PUBG -->
+
+    <div class="app">
+
+        <div class="app-top">
+
+            <div class="app-icon">
+                🎯
+            </div>
+
+            <div>
+                <h3>PUBG Mobile</h3>
+                <small>شحن UC</small>
+            </div>
+
+        </div>
+
+        <span class="status">
+            متوفر الآن ✅
+        </span>
+
+        <div class="offers">
+
+            <div class="offer">
+
+                <div class="offer-line">
+                    <span class="offer-name">
+                        UC
+                    </span>
+
+                    <span class="price">
+                        حسب العرض
+                    </span>
+                </div>
+
+                <div class="offer-info">
+                    اختر كمية UC المطلوبة وأرسل ID الحساب.
+                </div>
+
+                <button
+                    class="order"
+                    onclick="openOrder('PUBG Mobile - UC','حسب العرض')">
+                    🛒 طلب الشحن
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
 
-  </div>
+
+    <!-- Free Fire -->
+
+    <div class="app">
+
+        <div class="app-top">
+
+            <div class="app-icon">
+                🔥
+            </div>
+
+            <div>
+                <h3>Free Fire</h3>
+                <small>شحن Diamonds</small>
+            </div>
+
+        </div>
+
+        <span class="status">
+            متوفر الآن ✅
+        </span>
+
+        <div class="offers">
+
+            <div class="offer">
+
+                <div class="offer-line">
+                    <span class="offer-name">
+                        💎 Diamonds
+                    </span>
+
+                    <span class="price">
+                        حسب العرض
+                    </span>
+                </div>
+
+                <div class="offer-info">
+                    اختر الكمية وأرسل ID الحساب لإتمام الطلب.
+                </div>
+
+                <button
+                    class="order"
+                    onclick="openOrder('Free Fire - Diamonds','حسب العرض')">
+                    🛒 طلب الشحن
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 
-<script>
+<!-- COMING SOON -->
 
-/* ================================
-   بيانات التطبيقات والأسعار
-================================ */
-
-const apps = [
-
-  {
-    name:"eFootball / PES",
-    icon:"⚽",
-    description:"شحن Coins",
-    offers:[
-      {
-        label:"130 كوينز",
-        oldPrice:"400 دج",
-        price:"360 دج",
-        event:true
-      },
-      {
-        label:"300 كوينز",
-        oldPrice:"750 دج",
-        price:"675 دج",
-        event:true
-      },
-      {
-        label:"550 كوينز",
-        oldPrice:"1400 دج",
-        price:"1260 دج",
-        event:true
-      },
-      {
-        label:"750 كوينز",
-        oldPrice:"1800 دج",
-        price:"1620 دج",
-        event:true
-      },
-      {
-        label:"1040 كوينز",
-        oldPrice:"2400 دج",
-        price:"2160 دج",
-        event:true
-      }
-    ]
-  },
-
-  {
-    name:"PUBG Mobile",
-    icon:"🎮",
-    description:"شحن UC",
-    offers:[
-      {
-        label:"30 UC",
-        price:"300 دج"
-      },
-      {
-        label:"60 UC",
-        price:"380 دج"
-      },
-      {
-        label:"300 UC + 25",
-        price:"1100 دج"
-      },
-      {
-        label:"600 UC + 60",
-        price:"1600 دج"
-      },
-      {
-        label:"1500 UC + 300",
-        price:"3600 دج"
-      }
-    ]
-  },
-
-  {
-    name:"Free Fire",
-    icon:"🔥",
-    description:"شحن Diamonds",
-    offers:[
-      {
-        label:"100 💎",
-        price:"400 دج"
-      },
-      {
-        label:"310 💎",
-        price:"950 دج"
-      },
-      {
-        label:"520 💎",
-        price:"1450 دج"
-      },
-      {
-        label:"1060 💎",
-        price:"2700 دج"
-      }
-    ]
-  },
-
-  {
-    name:"TikTok",
-    icon:"🎵",
-    description:"متوفر عن قريب",
-    soon:true,
-    offers:[]
-  },
-
-  {
-    name:"Netflix",
-    icon:"🎬",
-    description:"متوفر عن قريب",
-    soon:true,
-    offers:[]
-  },
-
-  {
-    name:"Tengo Live",
-    icon:"📺",
-    description:"متوفر عن قريب",
-    soon:true,
-    offers:[]
-  },
-
-  {
-    name:"Ludo",
-    icon:"🎲",
-    description:"متوفر عن قريب",
-    soon:true,
-    offers:[]
-  },
-
-  {
-    name:"AliExpress",
-    icon:"🛒",
-    description:"متوفر عن قريب",
-    soon:true,
-    offers:[]
-  },
-
-  {
-    name:"TEMU",
-    icon:"🛍️",
-    description:"متوفر عن قريب",
-    soon:true,
-    offers:[]
-  }
-
-];
+<div class="section-title">
+    <h2>📱 خدمات أخرى</h2>
+    <span>قريباً ⏳</span>
+</div>
 
 
-/* ================================
-   عناصر الصفحة
-================================ */
+<div class="coming">
 
-const appsBox =
-  document.getElementById("apps");
-
-const modal =
-  document.getElementById("modal");
-
-const modalTitle =
-  document.getElementById("modalTitle");
-
-const offersBox =
-  document.getElementById("offers");
-
-const orderForm =
-  document.getElementById("orderForm");
-
-const accountId =
-  document.getElementById("accountId");
-
-const selectedAppInput =
-  document.getElementById("selectedApp");
-
-const selectedOfferInput =
-  document.getElementById("selectedOffer");
-
-let selectedApp = "";
-let selectedOffer = "";
-
-
-/* ================================
-   عرض التطبيقات
-================================ */
-
-apps.forEach((app,index)=>{
-
-  const card =
-    document.createElement("div");
-
-  card.className = "app-card";
-
-  card.innerHTML = `
-
-    <div class="app-icon">
-      ${app.icon}
+    <div class="soon-card">
+        <div class="soon-icon">🎮</div>
+        <h3>ألعاب أخرى</h3>
+        <p>
+            سيتم إضافة المزيد من الألعاب وخدمات الشحن قريباً.
+        </p>
+        <span class="status soon">
+            متوفر قريباً
+        </span>
     </div>
 
-    <div>
-      <h3>${app.name}</h3>
 
-      <small>
-        ${app.description}
-      </small>
+    <div class="soon-card">
+        <div class="soon-icon">💳</div>
+        <h3>تفعيل البطاقات</h3>
+        <p>
+            خدمة تفعيل البطاقات ستكون متاحة قريباً.
+        </p>
+        <span class="status soon">
+            متوفر قريباً
+        </span>
     </div>
 
-    <button
-      class="btn ${app.soon ? "soon" : ""}"
-      onclick="openApp(${index})"
-    >
-      ${app.soon ? "متوفر عن قريب" : "📦 عرض الأسعار"}
-    </button>
 
-  `;
+    <div class="soon-card">
+        <div class="soon-icon">🌐</div>
+        <h3>الشراء من المواقع</h3>
+        <p>
+            نوفر خدمة الشراء من المواقع عن طريق Visa وRedotPay.
+        </p>
+        <span class="status soon">
+            متوفر قريباً
+        </span>
+    </div>
 
-  appsBox.appendChild(card);
-
-});
+</div>
 
 
-/* ================================
-   فتح التطبيق
-================================ */
+<!-- PAYMENT -->
 
-function openApp(index){
+<section class="payment">
 
-  const app = apps[index];
+    <h2>💳 طرق الدفع والخدمات</h2>
 
-  selectedApp = app.name;
+    <p>
+        نوفر خدمات الشحن والتفعيل والشراء من المواقع.
+        طرق الدفع والخدمات المتاحة يتم تأكيدها عند الطلب.
+    </p>
 
-  modalTitle.textContent =
-    "📦 عروض " + app.name;
+    <div class="pay-list">
 
-  offersBox.innerHTML = "";
+        <div class="pay">💳 Visa</div>
 
-  orderForm.style.display = "none";
+        <div class="pay">💙 RedotPay</div>
 
-  if(app.soon){
+        <div class="pay">🇩🇿 خدمات للجزائر</div>
 
-    offersBox.innerHTML = `
+        <div class="pay">⚡ تنفيذ سريع</div>
 
-      <div class="empty">
+    </div>
 
-        <div style="font-size:45px">
-          ⏳
-        </div>
+</section>
 
-        <h3>
-          ${app.name}
-        </h3>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+    <h2>📞 اطلب خدمتك</h2>
+
+    <p>
+        اضغط على طلب العرض، اكتب اسمك وID الحساب والكمية المطلوبة،
+        ثم أرسل الطلب عبر وسيلة التواصل التي تستخدمها.
+    </p>
+
+    <div class="contact-buttons">
+
+        <!-- ضع رقم الواتساب الخاص بك مكان الرقم -->
+
+        <a
+            class="contact-btn whatsapp"
+            href="https://wa.me/213000000000"
+            target="_blank">
+            💬 WhatsApp
+        </a>
+
+
+        <!-- ضع رابط التليغرام الخاص بك -->
+
+        <a
+            class="contact-btn telegram"
+            href="https://t.me/rahimdz27"
+            target="_blank">
+            ✈️ Telegram
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>rahimdz27</strong>
+
+    <br><br>
+
+    🇩🇿 الجزائر &nbsp; • &nbsp; 🇵🇸 فلسطين
+
+    <br><br>
+
+    © 2026 rahimdz27 — جميع الحقوق محفوظة
+
+</footer>
+
+
+<!-- ================= ORDER MODAL ================= -->
+
+<div class="modal" id="orderModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeOrder()">
+            ×
+        </button>
+
+        <h2>🛒 طلب خدمة</h2>
 
         <p>
-          الخدمة متوفرة عن قريب إن شاء الله 🇩🇿
+            املأ المعلومات التالية ثم اضغط إرسال الطلب.
         </p>
 
-      </div>
 
-    `;
+        <div class="form-group">
 
-    modal.style.display = "block";
+            <label>
+                الخدمة
+            </label>
 
-    return;
-  }
+            <input
+                id="service"
+                type="text"
+                readonly>
 
-
-  /* إنشاء العروض */
-
-  app.offers.forEach((offer)=>{
-
-    const row =
-      document.createElement("div");
-
-    row.className = "offer";
-
-
-    let eventHTML = "";
-
-    if(offer.event){
-
-      eventHTML = `
-        <span class="event">
-          🔥 عرض مناسبات / حدث جديد
-        </span>
-      `;
-
-    }
-
-
-    let priceHTML = "";
-
-    if(offer.oldPrice){
-
-      priceHTML = `
-
-        <span class="price">
-
-          <span class="old-price">
-            ${offer.oldPrice}
-          </span>
-
-          ${offer.price}
-
-        </span>
-
-      `;
-
-    }else{
-
-      priceHTML = `
-        <span class="price">
-          ${offer.price}
-        </span>
-      `;
-
-    }
-
-
-    row.innerHTML = `
-
-      ${eventHTML}
-
-      <div class="offer-top">
-
-        <div class="offer-name">
-          🎁 ${offer.label}
         </div>
 
-        ${priceHTML}
 
-      </div>
+        <div class="form-group">
 
-      <button
-        class="buy-offer"
-        onclick='chooseOffer(${JSON.stringify(
-          offer.label + " — " + offer.price
-        )})'
-      >
-        🛒 شراء هذا العرض
-      </button>
+            <label>
+                السعر
+            </label>
 
-    `;
+            <input
+                id="selectedPrice"
+                type="text"
+                readonly>
 
-    offersBox.appendChild(row);
-
-  });
+        </div>
 
 
-  modal.style.display = "block";
+        <div class="form-group">
 
-}
+            <label>
+                اسمك
+            </label>
 
+            <input
+                id="customerName"
+                type="text"
+                placeholder="اكتب اسمك">
 
-/* ================================
-   اختيار العرض
-================================ */
-
-function chooseOffer(offer){
-
-  selectedOffer = offer;
-
-  selectedAppInput.value =
-    selectedApp;
-
-  selectedOfferInput.value =
-    selectedOffer;
-
-  orderForm.style.display =
-    "block";
-
-  setTimeout(()=>{
-    accountId.focus();
-  },100);
-
-}
+        </div>
 
 
-/* ================================
-   إخفاء نموذج الطلب
-================================ */
+        <div class="form-group">
 
-function hideForm(){
+            <label>
+                ID الحساب
+            </label>
 
-  orderForm.style.display =
-    "none";
+            <input
+                id="accountId"
+                type="text"
+                placeholder="اكتب ID الحساب">
 
-}
-
-
-/* ================================
-   إغلاق النافذة
-================================ */
-
-function closeModal(){
-
-  modal.style.display =
-    "none";
-
-  orderForm.style.display =
-    "none";
-
-  accountId.value = "";
-
-}
+        </div>
 
 
-/* إغلاق عند الضغط خارج النافذة */
+        <div class="form-group">
 
-window.addEventListener(
-  "click",
-  function(event){
+            <label>
+                الكمية / العرض المطلوب
+            </label>
 
-    if(event.target === modal){
+            <input
+                id="quantity"
+                type="text"
+                placeholder="مثال: 30 UC">
 
-      closeModal();
-
-    }
-
-  }
-);
+        </div>
 
 
-/* ================================
-   إرسال الطلب إلى واتساب
-================================ */
+        <button
+            class="send"
+            onclick="sendOrder()">
 
-function sendOrder(){
-
-  const id =
-    accountId.value.trim();
-
-  if(!id){
-
-    alert(
-      "من فضلك اكتب ID أو اسم المستخدم."
-    );
-
-    accountId.focus();
-
-    return;
-  }
-
-
-  const payment =
-    document.querySelector(
-      'input[name="payment"]:checked'
-    ).value;
-
-
-  const message =
-
-`🇩🇿 طلب جديد من متجر rahimdz27
-
-🎮 التطبيق:
-${selectedApp}
-
-🎁 العرض:
-${selectedOffer}
-
-🆔 ID / اسم المستخدم:
-${id}
-
-💳 طريقة الدفع:
-${payment}
-
-📱 أريد تأكيد الطلب.`;
-
-
-  const whatsappURL =
-    "https://wa.me/213662942215?text="
-    + encodeURIComponent(message);
-
-
-  window.open(
-    whatsappURL,
-    "_blank"
-  );
-
-}
-
-</script>
-
-</body>
-</html>
+      
