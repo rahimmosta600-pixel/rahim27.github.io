@@ -1,1133 +1,3247 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>rahimdz27 | متجر الشحن السريع</title>
-
-<meta name="description"
-content="rahimdz27 متجر للشحن السريع للألعاب والتطبيقات وتفعيل البطاقات والشراء من المواقع عبر Visa وRedotPay.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RAHIMDZ27 - متجر جزائري للشحن السريع للألعاب والتطبيقات والبطاقات والشراء من المتاجر العالمية">
+<title>RAHIMDZ27 | متجر الشحن الإلكتروني</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+:root{
+  --bg:#030907;
+  --panel:#07130f;
+  --panel2:#0b1b15;
+  --green:#19ff69;
+  --green2:#7cffad;
+  --text:#f5fff8;
+  --muted:#a9bbb1;
+  --line:rgba(25,255,105,.28);
 }
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
 
 body{
-    font-family:Arial,Tahoma,sans-serif;
-    background:
-        radial-gradient(circle at top,#dff4ff 0,#f7fcff 42%,#eef7ff 100%);
-    color:#123;
-    min-height:100vh;
+  margin:0;
+  background:
+  radial-gradient(circle at 10% 0%,rgba(25,255,105,.12),transparent 30%),
+  radial-gradient(circle at 100% 20%,rgba(0,180,90,.08),transparent 25%),
+  linear-gradient(145deg,#020604,#06110d 50%,#020504);
+  color:var(--text);
+  font-family:Tahoma,Arial,sans-serif;
+  min-height:100vh;
+  padding-bottom:82px;
 }
 
-button,input,select{
-    font:inherit;
-}
+button,input,select{font:inherit}
+a{text-decoration:none;color:inherit}
 
-button{
-    cursor:pointer;
-}
-
-.container{
-    width:min(1050px,94%);
-    margin:auto;
-}
-
-/* HEADER */
-header{
-    background:linear-gradient(135deg,#006ee6,#009dff);
-    color:white;
-    border-radius:0 0 35px 35px;
-    padding:22px 0 30px;
-    box-shadow:0 8px 30px #007ee633;
+.header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(2,8,6,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--line)
 }
 
 .topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
+  max-width:1180px;
+  margin:auto;
+  padding:12px 16px;
+  display:flex;
+  gap:14px;
+  align-items:center
 }
 
-.flags{
-    display:flex;
-    gap:7px;
-    font-size:25px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:235px
 }
 
-.profile{
-    text-align:center;
-    flex:1;
+.logo-mark{
+  width:50px;
+  height:50px;
+  border:2px solid var(--green);
+  border-radius:15px;
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  box-shadow:0 0 20px rgba(25,255,105,.25)
 }
 
-.avatar{
-    width:82px;
-    height:82px;
-    border-radius:50%;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:white;
-    color:#0079e8;
-    font-size:27px;
-    font-weight:900;
-    border:4px solid #ffffff99;
-    box-shadow:0 8px 20px #003c772d;
+.logo b{font-size:22px;color:white}
+.logo b span{color:var(--green)}
+.logo small{
+  display:block;
+  color:#b8c9c0;
+  margin-top:2px
 }
 
-.profile h1{
-    margin-top:9px;
-    font-size:27px;
+.search{
+  flex:1;
+  position:relative
 }
 
-.profile p{
-    margin-top:7px;
-    font-size:14px;
-    line-height:1.8;
+.search input{
+  width:100%;
+  height:48px;
+  border:1px solid var(--line);
+  background:#07110e;
+  color:white;
+  border-radius:28px;
+  padding:0 52px 0 18px;
+  outline:none
 }
 
-.badges{
-    display:flex;
-    justify-content:center;
-    gap:7px;
-    flex-wrap:wrap;
-    margin-top:12px;
+.search input:focus{
+  box-shadow:0 0 0 3px rgba(25,255,105,.1)
+}
+
+.search span{
+  position:absolute;
+  right:17px;
+  top:10px;
+  font-size:25px;
+  color:var(--green)
+}
+
+.cart-btn{
+  position:relative;
+  background:transparent;
+  color:white;
+  border:0;
+  font-size:28px;
+  cursor:pointer
 }
 
 .badge{
-    background:#ffffff22;
-    border:1px solid #ffffff55;
-    padding:6px 10px;
-    border-radius:20px;
-    font-size:12px;
+  position:absolute;
+  right:-4px;
+  top:-3px;
+  background:var(--green);
+  color:#001b09;
+  font-size:11px;
+  font-weight:900;
+  border-radius:50%;
+  min-width:20px;
+  height:20px;
+  display:grid;
+  place-items:center
 }
 
-/* NOTICE */
-.notice{
-    margin-top:18px;
-    background:white;
-    color:#075da9;
-    border-radius:18px;
-    padding:13px 15px;
-    box-shadow:0 5px 20px #006ee622;
-    text-align:center;
-    font-weight:bold;
-    line-height:1.8;
+.container{
+  max-width:1180px;
+  margin:auto;
+  padding:18px 14px
 }
 
-/* SECTION */
-section{
-    padding:28px 0;
+.hero{
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(120deg,#071a11,#020706);
+  padding:30px 24px;
+  box-shadow:0 0 35px rgba(25,255,105,.08)
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    135deg,
+    transparent 55%,
+    rgba(25,255,105,.08)
+  );
+  pointer-events:none
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:18px;
+  align-items:center
+}
+
+.flag{font-size:32px}
+
+.hero h1{
+  font-size:clamp(27px,5vw,52px);
+  margin:8px 0;
+  color:var(--green);
+  text-shadow:0 0 20px rgba(25,255,105,.22)
+}
+
+.hero p{
+  font-size:18px;
+  line-height:1.8;
+  color:#dce8e1;
+  margin:8px 0
+}
+
+.hero-box{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:20px;
+  background:rgba(0,0,0,.24);
+  text-align:center
+}
+
+.hero-box .big{font-size:45px}
+
+.pill{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid var(--green);
+  border-radius:999px;
+  color:var(--green);
+  font-weight:700;
+  margin-top:10px
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:28px 2px 12px
 }
 
 .section-title h2{
-    color:#075da9;
-    font-size:23px;
+  margin:0;
+  font-size:23px
 }
 
-.section-title p{
-    color:#678;
-    margin-top:6px;
-    font-size:13px;
+.section-title h2 span{color:var(--green)}
+.section-title small{color:var(--muted)}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px
 }
 
-/* APPS */
+.cat{
+  background:linear-gradient(145deg,#0b1b15,#06100c);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:22px 12px;
+  text-align:center;
+  cursor:pointer;
+  transition:.2s
+}
+
+.cat:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 25px rgba(25,255,105,.12)
+}
+
+.cat .ico{
+  font-size:38px;
+  color:var(--green)
+}
+
+.cat b{
+  display:block;
+  font-size:18px;
+  margin:9px 0 5px
+}
+
+.cat small{color:var(--muted)}
+
 .apps{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px
 }
 
-.app{
-    background:white;
-    border-radius:23px;
-    padding:18px;
-    box-shadow:0 7px 25px #006ee61b;
-    border:1px solid #d9efff;
-    transition:.2s;
+.app-card{
+  border:1px solid var(--line);
+  background:linear-gradient(150deg,#0a1a14,#030906);
+  border-radius:18px;
+  padding:14px 8px;
+  text-align:center;
+  cursor:pointer;
+  transition:.2s
 }
 
-.app:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px #006ee62a;
+.app-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--green)
 }
 
-.app-icon{
-    width:62px;
-    height:62px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:30px;
-    margin-bottom:12px;
-    background:#e9f7ff;
+.app-logo{
+  width:62px;
+  height:62px;
+  margin:auto;
+  border-radius:18px;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  font-weight:900;
+  background:linear-gradient(145deg,#111,#06130d);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:inset 0 0 15px rgba(25,255,105,.08)
 }
 
-.app h3{
-    color:#075da9;
-    font-size:18px;
+.app-card b{
+  display:block;
+  margin-top:9px
 }
 
-.app-desc{
-    color:#71808b;
-    font-size:12px;
-    margin:6px 0 13px;
+.available{
+  display:inline-block;
+  color:var(--green);
+  font-size:11px;
+  margin-top:6px
 }
 
-.offers{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
+.special{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px
 }
 
-.offer{
-    border:1px solid #e0edf5;
-    background:#f8fcff;
-    border-radius:14px;
-    padding:10px;
+.offer-mini{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#06110c;
+  padding:15px;
+  text-align:center
 }
 
-.offer-line{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:7px;
-}
+.offer-mini .ico{font-size:30px}
 
-.offer-name{
-    font-weight:bold;
-    color:#234;
-    font-size:13px;
+.offer-mini b{
+  display:block;
+  margin:6px 0
 }
 
 .price{
-    color:#0078df;
-    font-weight:900;
-    white-space:nowrap;
+  color:var(--green);
+  font-weight:900
 }
 
-.order-btn{
-    width:100%;
-    border:0;
-    background:linear-gradient(135deg,#0078ed,#00a4ff);
-    color:white;
-    border-radius:12px;
-    padding:10px;
-    margin-top:8px;
-    font-weight:bold;
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px
 }
 
-.order-btn:hover{
-    opacity:.9;
+.product{
+  background:linear-gradient(145deg,#091811,#030806);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px
 }
 
-.coming{
-    opacity:.8;
+.product-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-bottom:12px;
+  margin-bottom:12px
 }
 
-.coming .order-btn{
-    background:#9eabb4;
-    cursor:not-allowed;
+.product-head .app-logo{
+  margin:0;
+  width:54px;
+  height:54px
 }
 
-/* PAYMENT */
-.payment-box{
-    background:linear-gradient(135deg,#063a78,#005ebd);
-    color:white;
-    border-radius:25px;
-    padding:22px;
-    box-shadow:0 10px 30px #005ebd33;
-}
+.product-head h3{margin:0}
+.product-head small{color:var(--green)}
 
-.payment-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-    margin-top:15px;
-}
-
-.payment{
-    background:#ffffff15;
-    border:1px solid #ffffff25;
-    border-radius:17px;
-    padding:17px;
-    text-align:center;
-}
-
-.payment strong{
-    display:block;
-    font-size:17px;
-    margin-bottom:5px;
-}
-
-.payment span{
-    font-size:12px;
-    opacity:.85;
-}
-
-/* CONTACT */
-.contacts{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.contact{
-    text-decoration:none;
-    background:white;
-    border-radius:18px;
-    padding:17px;
-    color:#123;
-    box-shadow:0 6px 22px #006ee61a;
-    text-align:center;
-}
-
-.contact strong{
-    display:block;
-    color:#0675d9;
-    margin-bottom:5px;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    color:#70808c;
-    font-size:12px;
-    padding:10px 0 28px;
-}
-
-/* MODAL */
-.modal{
-    position:fixed;
-    inset:0;
-    background:#001a2d99;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:15px;
-    z-index:1000;
-}
-
-.modal.active{
-    display:flex;
-}
-
-.modal-box{
-    background:white;
-    width:min(480px,100%);
-    border-radius:25px;
-    padding:22px;
-    box-shadow:0 20px 70px #001b3b55;
-    max-height:92vh;
-    overflow:auto;
-}
-
-.modal-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    margin-bottom:18px;
-}
-
-.modal-head h2{
-    color:#075da9;
-    font-size:20px;
-}
-
-.close{
-    width:38px;
-    height:38px;
-    border:0;
-    border-radius:50%;
-    background:#eef6fb;
-    color:#456;
-    font-size:20px;
-}
-
-.field{
-    margin-bottom:13px;
-}
+.field{margin:10px 0}
 
 .field label{
-    display:block;
-    margin-bottom:6px;
-    color:#345;
-    font-size:13px;
-    font-weight:bold;
+  display:block;
+  color:#c9d7cf;
+  margin-bottom:6px;
+  font-size:14px
 }
 
 .field input,
 .field select{
-    width:100%;
-    border:1px solid #d6e5ee;
-    border-radius:12px;
-    padding:12px;
-    outline:none;
-    background:#fbfdff;
+  width:100%;
+  height:48px;
+  border-radius:13px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#020705;
+  color:white;
+  padding:0 13px;
+  outline:none
 }
 
 .field input:focus,
 .field select:focus{
-    border-color:#0089ee;
+  border-color:var(--green)
 }
 
-.summary{
-    background:#eef8ff;
-    border-radius:15px;
-    padding:13px;
-    margin:14px 0;
-    color:#075da9;
-    line-height:1.9;
-    font-size:13px;
+.actions{
+  display:flex;
+  gap:8px;
+  margin-top:12px
 }
 
-.total{
-    font-size:20px;
-    font-weight:900;
+.btn{
+  flex:1;
+  height:45px;
+  border-radius:14px;
+  border:1px solid var(--green);
+  cursor:pointer;
+  font-weight:900
 }
 
-.pay-buttons{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:9px;
-    margin-top:10px;
+.btn.primary{
+  background:var(--green);
+  color:#001b09
 }
 
-.pay-btn{
-    border:0;
-    border-radius:12px;
-    padding:12px;
-    color:white;
-    background:#087be5;
-    font-weight:bold;
+.btn.secondary{
+  background:transparent;
+  color:white
 }
 
-.pay-btn.redot{
-    background:#222;
+.payment{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap
 }
 
-.note{
-    background:#fff8df;
-    color:#755c00;
-    padding:10px;
-    border-radius:12px;
-    font-size:11px;
-    line-height:1.7;
-    margin-top:12px;
+.pay{
+  padding:10px 15px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:#08120f;
+  font-weight:800
 }
 
-/* RESPONSIVE */
-@media(max-width:800px){
-    .apps{
-        grid-template-columns:repeat(2,1fr);
-    }
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
+}
 
-    .payment-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.service{
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#06100c
+}
+
+.service h3{
+  margin-top:0;
+  color:var(--green)
+}
+
+.service p{
+  color:#c8d5ce;
+  line-height:1.7
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  margin-top:35px;
+  padding:28px 14px;
+  text-align:center;
+  background:#020705
+}
+
+.footer b{color:var(--green)}
+.footer p{color:var(--muted)}
+
+.bottom{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:60;
+  background:rgba(2,8,6,.96);
+  border-top:1px solid var(--line);
+  backdrop-filter:blur(15px);
+  display:flex;
+  justify-content:center
+}
+
+.bottom-inner{
+  width:min(600px,100%);
+  display:grid;
+  grid-template-columns:repeat(4,1fr)
+}
+
+.nav{
+  padding:9px 5px;
+  text-align:center;
+  color:#d8e2dc;
+  font-size:12px
+}
+
+.nav span{
+  display:block;
+  font-size:25px;
+  margin-bottom:3px
+}
+
+.nav.active{color:var(--green)}
+
+.toast{
+  position:fixed;
+  top:78px;
+  left:50%;
+  transform:translateX(-50%) translateY(-20px);
+  background:#0b1b14;
+  border:1px solid var(--green);
+  color:white;
+  padding:12px 18px;
+  border-radius:12px;
+  z-index:100;
+  opacity:0;
+  pointer-events:none;
+  transition:.25s
+}
+
+.toast.show{
+  opacity:1;
+  transform:translateX(-50%) translateY(0)
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.72);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:90;
+  padding:15px
+}
+
+.modal.open{display:flex}
+
+.modal-box{
+  width:min(720px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#07120e;
+  border:1px solid var(--green);
+  border-radius:22px;
+  padding:20px;
+  box-shadow:0 0 45px rgba(25,255,105,.15)
+}
+
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+
+.close{
+  background:none;
+  border:0;
+  color:white;
+  font-size:25px;
+  cursor:pointer
+}
+
+.list{
+  display:grid;
+  gap:8px;
+  margin-top:12px
+}
+
+.list button{
+  background:#06100c;
+  border:1px solid rgba(25,255,105,.3);
+  color:white;
+  padding:13px;
+  border-radius:12px;
+  text-align:right;
+  cursor:pointer
+}
+
+.list button:hover{border-color:var(--green)}
+
+@media(max-width:900px){
+  .categories{grid-template-columns:repeat(2,1fr)}
+  .apps{grid-template-columns:repeat(3,1fr)}
+  .special{grid-template-columns:repeat(3,1fr)}
+  .hero-grid{grid-template-columns:1fr}
+  .products{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:560px){
-    .apps{
-        grid-template-columns:1fr;
-    }
-
-    .payment-grid,
-    .contacts{
-        grid-template-columns:1fr;
-    }
-
-    .profile h1{
-        font-size:23px;
-    }
-
-    .topbar{
-        align-items:flex-start;
-    }
+  .topbar{padding:9px 10px}
+  .logo{min-width:auto}
+  .logo b{font-size:17px}
+  .logo-mark{
+    width:43px;
+    height:43px;
+    font-size:22px
+  }
+  .search input{
+    height:43px;
+    font-size:13px
+  }
+  .cart-btn{font-size:24px}
+  .container{padding:12px 9px}
+  .hero{padding:22px 16px}
+  .hero p{font-size:15px}
+  .categories{gap:8px}
+  .cat{padding:16px 7px}
+  .cat .ico{font-size:30px}
+  .cat b{font-size:14px}
+  .apps{
+    grid-template-columns:repeat(3,1fr);
+    gap:7px
+  }
+  .app-card{padding:10px 4px}
+  .app-logo{
+    width:52px;
+    height:52px;
+    font-size:20px
+  }
+  .app-card b{font-size:12px}
+  .special{grid-template-columns:repeat(2,1fr)}
+  .section-title h2{font-size:18px}
+  .products{gap:10px}
+  .product{padding:13px}
+  .actions{flex-direction:column}
+  .logo small{font-size:9px}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="container">
+<div class="toast" id="toast"></div>
 
-    <div class="topbar">
+<header class="header">
+  <div class="topbar">
 
-        <div class="flags">
-            🇩🇿
-            🇵🇸
-        </div>
+    <a class="logo" href="#home">
+      <div class="logo-mark">🎮</div>
 
-        <div class="profile">
+      <div>
+        <b>RAHIM<span>DZ27</span></b>
+        <small>متجرك الإلكتروني 🇩🇿</small>
+      </div>
+    </a>
 
-            <div class="avatar">R27</div>
-
-            <h1>rahimdz27</h1>
-
-            <p>
-                يرحب بيكم لشحن سريع للألعاب والتطبيقات
-                وتفعيل البطاقات والشراء من المواقع
-                عن طريق Visa أو RedotPay
-            </p>
-
-            <div class="badges">
-                <span class="badge">⚡ شحن سريع</span>
-                <span class="badge">🔐 طلب آمن</span>
-                <span class="badge">🇩🇿 الجزائر</span>
-            </div>
-
-        </div>
-
+    <div class="search">
+      <span>⌕</span>
+      <input
+        id="search"
+        type="search"
+        placeholder="البحث عن المنتجات"
+        oninput="filterApps()"
+      >
     </div>
 
-    <div class="notice">
-        🎁 عروض خاصة ومناسبة للجميع
-        <br>
-        📢 الأسعار والكميات المعروضة في المتجر ثابتة حسب كل عرض
-    </div>
+    <button class="cart-btn" onclick="scrollToId('cart')">
+      🛒
+      <span class="badge" id="cartCount">0</span>
+    </button>
 
-</div>
+  </div>
 </header>
 
 
-<main class="container">
+<main class="container" id="home">
 
-<section>
+<!-- الترحيب -->
+
+<section class="hero">
+
+  <div class="hero-grid">
+
+    <div>
+
+      <div class="flag">🇩🇿 🇵🇸</div>
+
+      <h1>مرحباً بكم في RAHIMDZ27</h1>
+
+      <p>
+        متجر جزائري للشحن السريع للألعاب والتطبيقات،
+        شحن البطاقات، والعروض الخاصة والشراء من المتاجر العالمية.
+      </p>
+
+      <span class="pill">
+        ⚡ أسعار تنافسية • 🛡️ تعامل آمن • 🎧 دعم العملاء
+      </span>
+
+    </div>
+
+    <div class="hero-box">
+
+      <div class="big">👑</div>
+
+      <b style="font-size:22px">
+        شحن سريع وموثوق
+      </b>
+
+      <p>
+        اختر الخدمة ثم اختر الكمية
+        وأدخل الـID الخاص بك.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- الأيقونات الأربعة -->
 
 <div class="section-title">
-    <h2>🎮 الألعاب والتطبيقات المتوفرة</h2>
-    <p>اختر التطبيق ثم اختر العرض الذي تريده</p>
+  <h2>الخدمات الرئيسية</h2>
+  <small>اختر القسم</small>
+</div>
+
+<section class="categories">
+
+  <a
+    class="cat"
+    href="javascript:void(0)"
+    onclick="openAppsModal()"
+  >
+    <div class="ico">🎮</div>
+    <b>شحن التطبيقات</b>
+    <small>ألعاب وتطبيقات</small>
+  </a>
+
+
+  <a class="cat" href="#cards">
+
+    <div class="ico">💳</div>
+
+    <b>شحن البطاقات</b>
+
+    <small>
+      Visa • RedotPay • Netflix
+    </small>
+
+  </a>
+
+
+  <a class="cat" href="#stores">
+
+    <div class="ico">🛍️</div>
+
+    <b>شراء من المتاجر العالمية</b>
+
+    <small>
+      Temu • AliExpress
+    </small>
+
+  </a>
+
+
+  <a class="cat" href="#special">
+
+    <div class="ico">🎁</div>
+
+    <b>عروض خاصة</b>
+
+    <small>
+      تخفيضات محدودة
+    </small>
+
+  </a>
+
+</section>
+
+
+<!-- هذا القسم مخفي من الواجهة الرئيسية -->
+
+<div
+  class="section-title"
+  id="apps"
+  style="display:none"
+>
+
+  <h2>
+    🎮 التطبيقات والألعاب
+    <span>المتوفرة للشحن</span>
+  </h2>
+
+  <small>
+    اضغط على التطبيق
+  </small>
+
 </div>
 
 
-<div class="apps">
+<section
+  class="apps"
+  id="appGrid"
+  style="display:none"
+>
 
-<!-- eFOOTBALL -->
-<div class="app">
-
-    <div class="app-icon">⚽</div>
-
-    <h3>eFootball / PES</h3>
-
-    <div class="app-desc">
-        اختر العرض والكمية ثم أدخل ID اللاعب
-    </div>
-
-    <div class="offers">
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">لاعب</span>
-                <span class="price">300 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','لاعب',300)">
-                طلب العرض
-            </button>
-        </div>
+</section>
 
 
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">مدرب</span>
-                <span class="price">600 دج</span>
-            </div>
+<!-- العروض الخاصة -->
 
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','مدرب',600)">
-                طلب العرض
-            </button>
-        </div>
+<div class="section-title" id="special">
 
+  <h2>🎁 عروض خاصة</h2>
 
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">130 Coins</span>
-                <span class="price">400 دج</span>
-            </div>
+  <small>
+    عروض محدودة
+  </small>
 
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','130 Coins',400)">
-                طلب العرض
-            </button>
-        </div>
-
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">300 Coins</span>
-                <span class="price">750 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','300 Coins',750)">
-                طلب العرض
-            </button>
-        </div>
-
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">550 Coins</span>
-                <span class="price">1400 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','550 Coins',1400)">
-                طلب العرض
-            </button>
-        </div>
-
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">750 Coins</span>
-                <span class="price">1800 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','750 Coins',1800)">
-                طلب العرض
-            </button>
-        </div>
-
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">1040 Coins</span>
-                <span class="price">2400 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('eFootball / PES','1040 Coins',2400)">
-                طلب العرض
-            </button>
-        </div>
-
-    </div>
 </div>
+
+
+<section class="special">
+
+  <div class="offer-mini">
+
+    <div class="ico">⚽</div>
+
+    <b>لاعب مميز</b>
+
+    <span class="price">
+      300 دج
+    </span>
+
+  </div>
+
+
+  <div class="offer-mini">
+
+    <div class="ico">🧑‍🏫</div>
+
+    <b>مدرب مميز</b>
+
+    <span class="price">
+      600 دج
+    </span>
+
+  </div>
+
+
+  <div class="offer-mini">
+
+    <div class="ico">🎯</div>
+
+    <b>تخفيضات PUBG</b>
+
+    <span>
+      شحن مرة واحدة فقط
+    </span>
+
+  </div>
+
+
+  <div class="offer-mini">
+
+    <div class="ico">🔥</div>
+
+    <b>تخفيضات Free Fire</b>
+
+    <span>
+      شحن مرة واحدة
+    </span>
+
+  </div>
+
+
+  <div class="offer-mini">
+
+    <div class="ico">♪</div>
+
+    <b>تخفيضات TikTok</b>
+
+    <span>
+      شحن بسعر مميز
+    </span>
+
+  </div>
+
+
+  <div class="offer-mini">
+
+    <div class="ico">WHO</div>
+
+    <b>تخفيضات Who</b>
+
+    <span>
+      شحن بسعر مميز
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- المنتجات لا تظهر حتى يختار الزبون التطبيق -->
+
+<div
+  class="section-title"
+  id="productsTitle"
+  style="display:none"
+>
+
+  <h2>📦 المنتجات القابلة للطلب</h2>
+
+  <small>
+    العروض تظهر عند اختيار الكمية
+  </small>
+
+</div>
+
+
+<section
+  class="products"
+  id="productsSection"
+  style="display:none"
+>
 
 
 <!-- PUBG -->
-<div class="app">
 
-    <div class="app-icon">🎯</div>
+<article class="product" id="PUBG">
 
-    <h3>PUBG Mobile</h3>
+  <div class="product-head">
 
-    <div class="app-desc">
-        UC حسب العروض التي تعتمدها في متجرك
+    <div class="app-logo">
+      PUBG
     </div>
 
-    <div class="offers">
+    <div>
 
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">UC حسب العرض</span>
-                <span class="price">حسب العرض</span>
-            </div>
+      <h3>
+        PUBG Mobile
+      </h3>
 
-            <button class="order-btn"
-            onclick="openComing('PUBG Mobile')">
-                عرض التفاصيل
-            </button>
-        </div>
+      <small>
+        شحن UC
+      </small>
 
     </div>
 
-</div>
+  </div>
 
 
-<!-- FREE FIRE -->
-<div class="app">
+  <div class="field">
 
-    <div class="app-icon">🔥</div>
+    <label>
+      اكتب الـID الخاص بك
+    </label>
 
-    <h3>Free Fire</h3>
+    <input
+      id="id-PUBG"
+      placeholder="PUBG ID"
+    >
 
-    <div class="app-desc">
-        Diamonds حسب العروض التي تعتمدها في متجرك
-    </div>
-
-    <div class="offers">
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">Diamonds حسب العرض</span>
-                <span class="price">حسب العرض</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openComing('Free Fire')">
-                عرض التفاصيل
-            </button>
-        </div>
-
-    </div>
-
-</div>
+  </div>
 
 
-<!-- TIKTOK -->
-<div class="app">
+  <div class="field">
 
-    <div class="app-icon">🎵</div>
+    <label>
+      اختر الكمية
+    </label>
 
-    <h3>TikTok</h3>
+    <select
+      id="sel-PUBG"
+      onchange="updatePrice('PUBG')"
+    >
 
-    <div class="app-desc">
-        شحن TikTok Coins — عروض ثابتة
-    </div>
+      <option value="">
+        اختر كمية الشحن
+      </option>
 
-    <div class="offers">
+      <option
+        data-price="300"
+        value="30 UC"
+      >
+        30 UC — 300 دج
+      </option>
 
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">12 Coins</span>
-                <span class="price">200 دج</span>
-            </div>
+      <option
+        data-price="500"
+        value="60 UC"
+      >
+        60 UC — 500 دج
+      </option>
 
-            <button class="order-btn"
-            onclick="openOrder('TikTok','12 Coins',200)">
-                طلب العرض
-            </button>
-        </div>
+      <option
+        data-price="1900"
+        value="325 UC"
+      >
+        325 UC — 1900 دج
+      </option>
 
+      <option
+        data-price="3500"
+        value="660 UC"
+      >
+        660 UC — 3500 دج
+      </option>
 
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">117 Coins</span>
-                <span class="price">330 دج</span>
-            </div>
+      <option
+        data-price="8500"
+        value="1800 UC"
+      >
+        1800 UC — 8500 دج
+      </option>
 
-            <button class="order-btn"
-            onclick="openOrder('TikTok','117 Coins',330)">
-                طلب العرض
-            </button>
-        </div>
+    </select>
 
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">447 Coins</span>
-                <span class="price">850 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('TikTok','447 Coins',850)">
-                طلب العرض
-            </button>
-        </div>
-
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">897 Coins</span>
-                <span class="price">1500 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('TikTok','897 Coins',1500)">
-                طلب العرض
-            </button>
-        </div>
+  </div>
 
 
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">1697 Coins</span>
-                <span class="price">3000 دج</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openOrder('TikTok','1697 Coins',3000)">
-                طلب العرض
-            </button>
-        </div>
-
-    </div>
-
-</div>
+  <div
+    class="price"
+    id="price-PUBG"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
 
 
-<!-- WHATSAPP -->
-<div class="app">
+  <div class="actions">
 
-    <div class="app-icon">💬</div>
-
-    <h3>WhatsApp</h3>
-
-    <div class="app-desc">
-        خدمات وعروض WhatsApp
-    </div>
-
-    <div class="offers">
-
-        <div class="offer">
-            <div class="offer-line">
-                <span class="offer-name">خدمة WhatsApp</span>
-                <span class="price">حسب الطلب</span>
-            </div>
-
-            <button class="order-btn"
-            onclick="openComing('WhatsApp')">
-                عرض التفاصيل
-            </button>
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- MORE GAMES -->
-<div class="app coming">
-
-    <div class="app-icon">🎮</div>
-
-    <h3>ألعاب أخرى</h3>
-
-    <div class="app-desc">
-        سيتم إضافة ألعاب وعروض جديدة باستمرار
-    </div>
-
-    <button class="order-btn" disabled>
-        متوفر قريباً
+    <button
+      class="btn primary"
+      onclick="addToCart('PUBG')"
+    >
+      إضافة إلى السلة
     </button>
 
-</div>
-
-
-<!-- CARDS -->
-<div class="app coming">
-
-    <div class="app-icon">💳</div>
-
-    <h3>تفعيل البطاقات</h3>
-
-    <div class="app-desc">
-        بطاقات وخدمات رقمية
-    </div>
-
-    <button class="order-btn" disabled>
-        متوفر قريباً
+    <button
+      class="btn secondary"
+      onclick="quickOrder('PUBG')"
+    >
+      شراء سريع
     </button>
 
-</div>
+  </div>
+
+</article>
 
 
-<!-- ONLINE PURCHASE -->
-<div class="app coming">
+<!-- eFootball -->
 
-    <div class="app-icon">🛒</div>
+<article class="product" id="eFootball">
 
-    <h3>الشراء من المواقع</h3>
+  <div class="product-head">
 
-    <div class="app-desc">
-        الشراء من المواقع عن طريق Visa أو RedotPay
+    <div class="app-logo">
+      ⚽
     </div>
 
-    <button class="order-btn" disabled>
-        متوفر قريباً
+    <div>
+
+      <h3>
+        eFootball / PES
+      </h3>
+
+      <small>
+        شحن كوينز
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID الخاص بك
+    </label>
+
+    <input
+      id="id-eFootball"
+      placeholder="eFootball ID"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر الكمية
+    </label>
+
+    <select
+      id="sel-eFootball"
+      onchange="updatePrice('eFootball')"
+    >
+
+      <option value="">
+        اختر كمية الشحن
+      </option>
+
+      <option
+        data-price="400"
+        value="130 كوينز"
+      >
+        130 كوينز — 400 دج
+      </option>
+
+      <option
+        data-price="750"
+        value="300 كوينز"
+      >
+        300 كوينز — 750 دج
+      </option>
+
+      <option
+        data-price="1400"
+        value="550 كوينز"
+      >
+        550 كوينز — 1400 دج
+      </option>
+
+      <option
+        data-price="1800"
+        value="750 كوينز"
+      >
+        750 كوينز — 1800 دج
+      </option>
+
+      <option
+        data-price="2400"
+        value="1040 كوينز"
+      >
+        1040 كوينز — 2400 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-eFootball"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('eFootball')"
+    >
+      إضافة إلى السلة
     </button>
 
-</div>
+    <button
+      class="btn secondary"
+      onclick="quickOrder('eFootball')"
+    >
+      شراء سريع
+    </button>
 
-</div>
+  </div>
+
+</article>
+
+
+<!-- Free Fire -->
+
+<article class="product" id="Free Fire">
+
+  <div class="product-head">
+
+    <div class="app-logo">
+      🔥
+    </div>
+
+    <div>
+
+      <h3>
+        Free Fire
+      </h3>
+
+      <small>
+        شحن Diamonds
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID الخاص بك
+    </label>
+
+    <input
+      id="id-Free Fire"
+      placeholder="Free Fire ID"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر الكمية
+    </label>
+
+    <select
+      id="sel-Free Fire"
+      onchange="updatePrice('Free Fire')"
+    >
+
+      <option value="">
+        اختر كمية الشحن
+      </option>
+
+      <option
+        data-price="400"
+        value="100"
+      >
+        100 — 400 دج
+      </option>
+
+      <option
+        data-price="950"
+        value="310"
+      >
+        310 — 950 دج
+      </option>
+
+      <option
+        data-price="1450"
+        value="520"
+      >
+        520 — 1450 دج
+      </option>
+
+      <option
+        data-price="2700"
+        value="1060"
+      >
+        1060 — 2700 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-Free Fire"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('Free Fire')"
+    >
+      إضافة إلى السلة
+    </button>
+
+    <button
+      class="btn secondary"
+      onclick="quickOrder('Free Fire')"
+    >
+      شراء سريع
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- TikTok -->
+
+<article class="product" id="TikTok">
+
+  <div class="product-head">
+
+    <div class="app-logo">
+      ♪
+    </div>
+
+    <div>
+
+      <h3>
+        TikTok
+      </h3>
+
+      <small>
+        شحن العملات
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID الخاص بك
+    </label>
+
+    <input
+      id="id-TikTok"
+      placeholder="TikTok ID"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر الكمية
+    </label>
+
+    <select
+      id="sel-TikTok"
+      onchange="updatePrice('TikTok')"
+    >
+
+      <option value="">
+        اختر كمية الشحن
+      </option>
+
+      <option
+        data-price="250"
+        value="12 عملة"
+      >
+        12 عملة — 250 دج
+      </option>
+
+      <option
+        data-price="400"
+        value="117 عملة"
+      >
+        117 عملة — 400 دج
+      </option>
+
+      <option
+        data-price="1100"
+        value="447 عملة"
+      >
+        447 عملة — 1100 دج
+      </option>
+
+      <option
+        data-price="1800"
+        value="897 عملة"
+      >
+        897 عملة — 1800 دج
+      </option>
+
+      <option
+        data-price="3500"
+        value="1697 عملة"
+      >
+        1697 عملة — 3500 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-TikTok"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('TikTok')"
+    >
+      إضافة إلى السلة
+    </button>
+
+    <button
+      class="btn secondary"
+      onclick="quickOrder('TikTok')"
+    >
+      شراء سريع
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- Bigo Live -->
+
+<article class="product" id="Bigo Live">
+
+  <div class="product-head">
+
+    <div class="app-logo">
+      🧸
+    </div>
+
+    <div>
+
+      <h3>
+        Bigo Live
+      </h3>
+
+      <small>
+        شحن جواهر
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID الخاص بك
+    </label>
+
+    <input
+      id="id-Bigo Live"
+      placeholder="Bigo ID"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر الكمية
+    </label>
+
+    <select
+      id="sel-Bigo Live"
+      onchange="updatePrice('Bigo Live')"
+    >
+
+      <option value="">
+        اختر كمية الشحن
+      </option>
+
+      <option
+        data-price="1450"
+        value="284 جوهرة"
+      >
+        284 جوهرة — 1450 دج
+      </option>
+
+      <option
+        data-price="2040"
+        value="405 جوهرة"
+      >
+        405 جوهرة — 2040 دج
+      </option>
+
+      <option
+        data-price="4050"
+        value="815 جوهرة"
+      >
+        815 جوهرة — 4050 دج
+      </option>
+
+      <option
+        data-price="6150"
+        value="1225 جوهرة"
+      >
+        1225 جوهرة — 6150 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-Bigo Live"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('Bigo Live')"
+    >
+      إضافة إلى السلة
+    </button>
+
+    <button
+      class="btn secondary"
+      onclick="quickOrder('Bigo Live')"
+    >
+      شراء سريع
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- Hala -->
+
+<article class="product" id="Hala">
+
+  <div class="product-head">
+
+    <div class="app-logo">
+      hala
+    </div>
+
+    <div>
+
+      <h3>
+        Hala
+      </h3>
+
+      <small>
+        شحن Diamonds
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID الخاص بك
+    </label>
+
+    <input
+      id="id-Hala"
+      placeholder="Hala ID"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر الكمية
+    </label>
+
+    <select
+      id="sel-Hala"
+      onchange="updatePrice('Hala')"
+    >
+
+      <option value="">
+        اختر كمية الشحن
+      </option>
+
+      <option
+        data-price="240"
+        value="20000 💎"
+      >
+        20000 💎 — 240 دج
+      </option>
+
+      <option
+        data-price="600"
+        value="50000 💎"
+      >
+        50000 💎 — 600 دج
+      </option>
+
+      <option
+        data-price="1080"
+        value="90000 💎"
+      >
+        90000 💎 — 1080 دج
+      </option>
+
+      <option
+        data-price="1800"
+        value="150000 💎"
+      >
+        150000 💎 — 1800 دج
+      </option>
+
+      <option
+        data-price="3600"
+        value="300000 💎"
+      >
+        300000 💎 — 3600 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-Hala"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('Hala')"
+    >
+      إضافة إلى السلة
+    </button>
+
+    <button
+      class="btn secondary"
+      onclick="quickOrder('Hala')"
+    >
+      شراء سريع
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- Yalla Ludo -->
+
+<article class="product" id="Yalla Ludo">
+
+  <div class="product-head">
+
+    <div class="app-logo">
+      🎲
+    </div>
+
+    <div>
+
+      <h3>
+        Yalla Ludo
+      </h3>
+
+      <small>
+        شحن الكمية
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID الخاص بك
+    </label>
+
+    <input
+      id="id-Yalla Ludo"
+      placeholder="Yalla Ludo ID"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر الكمية
+    </label>
+
+    <select
+      id="sel-Yalla Ludo"
+      onchange="updatePrice('Yalla Ludo')"
+    >
+
+      <option value="">
+        اختر كمية الشحن
+      </option>
+
+      <option
+        data-price="500"
+        value="2"
+      >
+        2 كمية — 500 دج
+      </option>
+
+      <option
+        data-price="1250"
+        value="5"
+      >
+        5 كمية — 1250 دج
+      </option>
+
+      <option
+        data-price="2500"
+        value="10"
+      >
+        10 كمية — 2500 دج
+      </option>
+
+      <option
+        data-price="6250"
+        value="25"
+      >
+        25 كمية — 6250 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-Yalla Ludo"
+  >
+    اختر الكمية لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('Yalla Ludo')"
+    >
+      إضافة إلى السلة
+    </button>
+
+    <button
+      class="btn secondary"
+      onclick="quickOrder('Yalla Ludo')"
+    >
+      شراء سريع
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- Snapchat -->
+
+<article class="product" id="Snapchat">
+
+  <div class="product-head">
+
+    <div class="app-logo">
+      👻
+    </div>
+
+    <div>
+
+      <h3>
+        Snapchat
+      </h3>
+
+      <small>
+        اشتراك
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اكتب الـID / اسم المستخدم
+    </label>
+
+    <input
+      id="id-Snapchat"
+      placeholder="اسم المستخدم"
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label>
+      اختر المدة
+    </label>
+
+    <select
+      id="sel-Snapchat"
+      onchange="updatePrice('Snapchat')"
+    >
+
+      <option value="">
+        اختر المدة
+      </option>
+
+      <option
+        data-price="1100"
+        value="3 أشهر"
+      >
+        3 أشهر — 1100 دج
+      </option>
+
+      <option
+        data-price="1950"
+        value="6 أشهر"
+      >
+        6 أشهر — 1950 دج
+      </option>
+
+      <option
+        data-price="3900"
+        value="12 شهر"
+      >
+        12 شهر — 3900 دج
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="price"
+    id="price-Snapchat"
+  >
+    اختر المدة لمعرفة السعر
+  </div>
+
+
+  <div class="actions">
+
+    <button
+      class="btn primary"
+      onclick="addToCart('Snapchat')"
+    >
+      إضافة إلى السلة
+    </button>
+
+    <button
+      class="btn secondary"
+      onclick="quickOrder('Snapchat')"
+    >
+      شراء سريع
+    </button>
+
+  </div>
+
+</article>
+
 </section>
 
 
-<!-- PAYMENT -->
-<section>
+<!-- البطاقات -->
 
-<div class="payment-box">
+<div class="section-title" id="cards">
 
-    <div class="section-title">
-        <h2 style="color:white">💳 طرق الدفع</h2>
+  <h2>
+    💳 شحن البطاقات والخدمات
+  </h2>
 
-        <p style="color:#d7edff">
-            طرق الدفع المتوفرة في المتجر
-        </p>
-    </div>
-
-    <div class="payment-grid">
-
-        <div class="payment">
-            <strong>💳 Visa</strong>
-            <span>دفع إلكتروني</span>
-        </div>
-
-        <div class="payment">
-            <strong>🔴 RedotPay</strong>
-            <span>دفع إلكتروني</span>
-        </div>
-
-        <div class="payment">
-            <strong>🇩🇿 Barid Pay</strong>
-            <span>دفع إلكتروني</span>
-        </div>
-
-        <div class="payment">
-            <strong>📱 BaridiMob</strong>
-            <span>دفع إلكتروني</span>
-        </div>
-
-    </div>
+  <small>
+    حسب طلب الزبون
+  </small>
 
 </div>
+
+
+<section class="service-grid">
+
+  <div class="service">
+
+    <h3>💳 Visa</h3>
+
+    <p>
+      خدمة شحن/تعبئة بطاقة Visa
+      حسب الخدمة المتاحة وطلب الزبون.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد شحن بطاقة Visa')"
+    >
+      طلب عبر واتساب
+    </button>
+
+  </div>
+
+
+  <div class="service">
+
+    <h3>🅿️ RedotPay</h3>
+
+    <p>
+      خدمات مرتبطة بـ RedotPay
+      حسب طلب الزبون.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد خدمة RedotPay')"
+    >
+      طلب عبر واتساب
+    </button>
+
+  </div>
+
+
+  <div class="service">
+
+    <h3>📺 Netflix</h3>
+
+    <p>
+      خدمة Netflix
+      حسب الطلب والتوفر.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد خدمة Netflix')"
+    >
+      طلب عبر واتساب
+    </button>
+
+  </div>
+
+
+  <div class="service">
+
+    <h3>💱 تحويل العملات</h3>
+
+    <p>
+      تحويل العملات حسب طلب الزبون،
+      يتم الاتفاق على التفاصيل قبل التنفيذ.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد تحويل عملات')"
+    >
+      تواصل معنا
+    </button>
+
+  </div>
 
 </section>
 
 
-<!-- CONTACT -->
-<section>
+<!-- المتاجر العالمية -->
+
+<div class="section-title" id="stores">
+
+  <h2>
+    🛍️ شراء من المتاجر العالمية
+  </h2>
+
+  <small>
+    تواصل على واتساب
+  </small>
+
+</div>
+
+
+<section class="service-grid">
+
+  <div class="service">
+
+    <h3>🛒 Temu</h3>
+
+    <p>
+      أرسل رابط المنتج والكمية،
+      ثم نتواصل معك لتأكيد السعر والتفاصيل.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد شراء منتج من Temu')"
+    >
+      طلب عبر واتساب
+    </button>
+
+  </div>
+
+
+  <div class="service">
+
+    <h3>🛒 AliExpress</h3>
+
+    <p>
+      أرسل رابط المنتج والكمية،
+      ثم يتم تأكيد التفاصيل معك.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد شراء منتج من AliExpress')"
+    >
+      طلب عبر واتساب
+    </button>
+
+  </div>
+
+
+  <div class="service">
+
+    <h3>📦 شراء مخصص</h3>
+
+    <p>
+      إذا كان لديك رابط من متجر عالمي آخر،
+      أرسله لنا عبر واتساب.
+    </p>
+
+    <button
+      class="btn primary"
+      onclick="contactWhatsApp('أريد شراء منتج من متجر عالمي')"
+    >
+      إرسال الرابط
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- السلة -->
+
+<div class="section-title" id="cart">
+
+  <h2>🛒 السلة</h2>
+
+  <small id="cartSummary">
+    لا توجد منتجات
+  </small>
+
+</div>
+
+
+<section class="product" id="cartBox">
+
+  <div
+    id="cartItems"
+    class="list"
+  >
+
+    <p style="color:var(--muted)">
+      السلة فارغة. اختر عرضًا من الأعلى.
+    </p>
+
+  </div>
+
+
+  <div
+    style="
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:12px;
+    padding-top:14px
+    "
+  >
+
+    <b>
+      المجموع
+    </b>
+
+    <b
+      class="price"
+      id="cartTotal"
+    >
+      0 دج
+    </b>
+
+  </div>
+
+
+  <button
+    class="btn primary"
+    style="width:100%;margin-top:12px"
+    onclick="checkout()"
+  >
+    إرسال الطلب عبر واتساب
+  </button>
+
+</section>
+
+
+<!-- وسائل الدفع -->
 
 <div class="section-title">
-    <h2>📞 تواصل معنا</h2>
-    <p>للاستفسار أو متابعة الطلب</p>
-</div>
 
-<div class="contacts">
-
-    <a class="contact"
-       href="https://wa.me/213662942215"
-       target="_blank">
-        <strong>💬 WhatsApp</strong>
-        <span>+213 662 942 215</span>
-    </a>
-
-    <a class="contact"
-       href="https://t.me/rahimdz27"
-       target="_blank">
-        <strong>✈️ Telegram</strong>
-        <span>@rahimdz27</span>
-    </a>
+  <h2>
+    💳 وسائل الدفع
+  </h2>
 
 </div>
 
-</section>
+
+<div class="payment">
+
+  <span class="pay">
+    💳 Visa
+  </span>
+
+  <span class="pay">
+    🔴 Mastercard
+  </span>
+
+  <span class="pay">
+    🅿️ RedotPay
+  </span>
+
+  <span class="pay">
+    🏦 تحويل بنكي
+  </span>
+
+  <span class="pay">
+    💵 دج
+  </span>
+
+</div>
 
 </main>
 
 
-<footer>
-    © <span id="year"></span> rahimdz27 — جميع الحقوق محفوظة
+<footer class="footer">
+
+  <div style="font-size:25px">
+    👑 <b>RAHIMDZ27</b>
+  </div>
+
+  <p>
+    متجر جزائري للشحن والخدمات الرقمية 🇩🇿
+  </p>
+
+  <p>
+    من نحن • الشروط • الخصوصية • اتصل بنا
+  </p>
+
+  <small style="color:#6f8178">
+    © 2026 RAHIMDZ27 — جميع الحقوق محفوظة
+  </small>
+
 </footer>
 
 
-<!-- ORDER MODAL -->
-<div class="modal" id="orderModal">
+<!-- الشريط السفلي -->
 
-<div class="modal-box">
+<nav class="bottom">
+
+  <div class="bottom-inner">
+
+    <a class="nav" href="#home">
+      <span>🏪</span>
+      المتجر
+    </a>
+
+    <a
+      class="nav"
+      href="javascript:void(0)"
+      onclick="openAppsModal()"
+    >
+      <span>🎮</span>
+      التطبيقات
+    </a>
+
+    <a class="nav" href="#cart">
+      <span>🛒</span>
+      السلة
+    </a>
+
+    <a class="nav" href="#home">
+      <span>👤</span>
+      حسابي
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- نافذة التطبيقات -->
+
+<div
+  class="modal"
+  id="appsModal"
+>
+
+  <div class="modal-box">
 
     <div class="modal-head">
 
-        <h2>🛒 تأكيد الطلب</h2>
+      <h2>
+        🎮 شحن التطبيقات والألعاب
+      </h2>
 
-        <button class="close"
-        onclick="closeModal()">×</button>
-
-    </div>
-
-
-    <div class="field">
-
-        <label>التطبيق / اللعبة</label>
-
-        <input
-        id="game"
-        type="text"
-        readonly>
+      <button
+        class="close"
+        onclick="closeAppsModal()"
+      >
+        ×
+      </button>
 
     </div>
 
 
-    <div class="field">
-
-        <label>العرض</label>
-
-        <input
-        id="offer"
-        type="text"
-        readonly>
-
-    </div>
-
-
-    <div class="field">
-
-        <label>اسم الزبون</label>
-
-        <input
-        id="customerName"
-        type="text"
-        placeholder="اكتب اسمك">
-
-    </div>
+    <p
+      style="
+      color:#a9bbb1;
+      line-height:1.8
+      "
+    >
+      اختر التطبيق الذي تريد شحنه.
+      العروض والأسعار تظهر بعد اختيار التطبيق
+      ثم اختيار الكمية.
+    </p>
 
 
-    <div class="field">
-
-        <label>ID اللاعب / الحساب</label>
-
-        <input
-        id="playerId"
-        type="text"
-        placeholder="أدخل ID الحساب">
-
-    </div>
+    <section
+      class="apps"
+      id="appsModalGrid"
+    >
 
 
-    <div class="summary">
+      <div
+        class="app-card"
+        data-name="PUBG PUBG Mobile بوبجي"
+        onclick="selectAppFromModal('PUBG')"
+      >
 
-        <div>
-            الكمية:
-            <strong id="quantityText">-</strong>
+        <div class="app-logo">
+          PUBG
         </div>
 
-        <div>
-            السعر:
-            <strong id="priceText">0 دج</strong>
+        <b>
+          PUBG Mobile
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
+
+
+      <div
+        class="app-card"
+        data-name="eFootball PES بياس"
+        onclick="selectAppFromModal('eFootball')"
+      >
+
+        <div class="app-logo">
+          ⚽
         </div>
 
-        <div class="total">
-            المبلغ النهائي:
-            <span id="totalText">0 دج</span>
+        <b>
+          eFootball / PES
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
+
+
+      <div
+        class="app-card"
+        data-name="Free Fire فري فاير"
+        onclick="selectAppFromModal('Free Fire')"
+      >
+
+        <div class="app-logo">
+          🔥
         </div>
 
-    </div>
+        <b>
+          Free Fire
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
 
 
-    <button
-    class="order-btn"
-    onclick="showPaymentMessage()">
-        💳 متابعة إلى الدفع
-    </button>
+      <div
+        class="app-card"
+        data-name="TikTok تيك توك"
+        onclick="selectAppFromModal('TikTok')"
+      >
+
+        <div class="app-logo">
+          ♪
+        </div>
+
+        <b>
+          TikTok
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
 
 
-    <div class="pay-buttons">
+      <div
+        class="app-card"
+        data-name="Who WHO"
+        onclick="selectAppFromModal('Who')"
+      >
 
-        <button
-        class="pay-btn"
-        onclick="showPaymentMessage('visa')">
-            💳 Visa
-        </button>
+        <div class="app-logo">
+          WHO
+        </div>
 
-        <button
-        class="pay-btn redot"
-        onclick="showPaymentMessage('redotpay')">
-            🔴 RedotPay
-        </button>
+        <b>
+          Who
+        </b>
 
-    </div>
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
 
 
-    <div class="note">
-        📢 اختر العرض والكمية ثم أدخل معلومات الحساب.
-        الأسعار المعروضة هي أسعار المتجر المحددة لكل عرض.
-    </div>
+      <div
+        class="app-card"
+        data-name="Bigo Live بيقو"
+        onclick="selectAppFromModal('Bigo Live')"
+      >
+
+        <div class="app-logo">
+          🧸
+        </div>
+
+        <b>
+          Bigo Live
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
+
+
+      <div
+        class="app-card"
+        data-name="Hala هالا"
+        onclick="selectAppFromModal('Hala')"
+      >
+
+        <div class="app-logo">
+          hala
+        </div>
+
+        <b>
+          Hala
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
+
+
+      <div
+        class="app-card"
+        data-name="Yalla Ludo يلا لودو"
+        onclick="selectAppFromModal('Yalla Ludo')"
+      >
+
+        <div class="app-logo">
+          🎲
+        </div>
+
+        <b>
+          Yalla Ludo
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
+
+
+      <div
+        class="app-card"
+        data-name="Snapchat سناب شات"
+        onclick="selectAppFromModal('Snapchat')"
+      >
+
+        <div class="app-logo">
+          👻
+        </div>
+
+        <b>
+          Snapchat
+        </b>
+
+        <span class="available">
+          ● متوفر للشحن
+        </span>
+
+      </div>
+
+
+    </section>
+
+  </div>
 
 </div>
+
+
+<!-- نافذة المعلومات -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+
+      <h2 id="modalTitle">
+        اختيار الكمية
+      </h2>
+
+      <button
+        class="close"
+        onclick="closeModal()"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div id="modalContent"></div>
+
+  </div>
+
 </div>
 
 
 <script>
 
-/* YEAR */
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+/*
+================================================
+رقم واتساب المتجر
+================================================
+
+ضع رقم واتسابك مكان XXXXXXXXX
+
+مثال:
+213555555555
+
+بدون علامة +
+*/
+
+const WA_NUMBER = "213XXXXXXXXX";
 
 
-/* CURRENT ORDER */
-let currentOrder = {
-    game:"",
-    offer:"",
-    price:0
+/*
+================================================
+بيانات المنتجات
+================================================
+*/
+
+const data = {
+
+  "PUBG":{
+    select:"sel-PUBG",
+    id:"id-PUBG"
+  },
+
+  "eFootball":{
+    select:"sel-eFootball",
+    id:"id-eFootball"
+  },
+
+  "Free Fire":{
+    select:"sel-Free Fire",
+    id:"id-Free Fire"
+  },
+
+  "TikTok":{
+    select:"sel-TikTok",
+    id:"id-TikTok"
+  },
+
+  "Bigo Live":{
+    select:"sel-Bigo Live",
+    id:"id-Bigo Live"
+  },
+
+  "Hala":{
+    select:"sel-Hala",
+    id:"id-Hala"
+  },
+
+  "Yalla Ludo":{
+    select:"sel-Yalla Ludo",
+    id:"id-Yalla Ludo"
+  },
+
+  "Snapchat":{
+    select:"sel-Snapchat",
+    id:"id-Snapchat"
+  }
+
 };
 
 
-/* OPEN ORDER */
-function openOrder(game,offer,price){
+let cart=[];
 
-    currentOrder = {
-        game:game,
-        offer:offer,
-        price:price
-    };
 
-    document.getElementById("game").value =
-        game;
+/*
+================================================
+رسائل المتجر
+================================================
+*/
 
-    document.getElementById("offer").value =
-        offer;
+function toast(msg){
 
-    document.getElementById("customerName").value =
-        "";
+  const t =
+    document.getElementById("toast");
 
-    document.getElementById("playerId").value =
-        "";
+  t.textContent=msg;
 
-    document.getElementById("quantityText").textContent =
-        offer;
+  t.classList.add("show");
 
-    document.getElementById("priceText").textContent =
-        price.toLocaleString("ar-DZ") + " دج";
+  setTimeout(
+    ()=>t.classList.remove("show"),
+    2200
+  );
 
-    document.getElementById("totalText").textContent =
-        price.toLocaleString("ar-DZ") + " دج";
-
-    document.getElementById("orderModal")
-        .classList.add("active");
 }
 
 
-/* CLOSE MODAL */
-function closeModal(){
+/*
+================================================
+الانتقال
+================================================
+*/
 
-    document.getElementById("orderModal")
-        .classList.remove("active");
+function scrollToId(id){
+
+  document
+    .getElementById(id)
+    ?.scrollIntoView({
+      behavior:"smooth"
+    });
+
 }
 
 
-/* CLICK OUTSIDE MODAL */
-document.getElementById("orderModal")
-.addEventListener("click",function(e){
+/*
+================================================
+البحث
+================================================
+*/
 
-    if(e.target === this){
-        closeModal();
-    }
+function filterApps(){
 
-});
+  const q =
+    document
+      .getElementById("search")
+      .value
+      .trim()
+      .toLowerCase();
+
+  document
+    .querySelectorAll("#appsModalGrid .app-card")
+    .forEach(card=>{
+
+      card.style.display =
+        !q ||
+        card.dataset.name
+          .toLowerCase()
+          .includes(q)
+        ? ""
+        : "none";
+
+    });
+
+}
 
 
-/* COMING SOON */
-function openComing(game){
+/*
+================================================
+تحديث السعر
+================================================
+*/
 
-    alert(
-        "📢 عروض " +
-        game +
-        " سيتم إضافتها لاحقاً."
+function updatePrice(app){
+
+  const s =
+    document.getElementById(
+      data[app].select
     );
 
+  const opt =
+    s.options[s.selectedIndex];
+
+  const price =
+    document.getElementById(
+      "price-"+app
+    );
+
+  price.textContent =
+    opt &&
+    opt.dataset.price
+
+    ?
+
+    Number(
+      opt.dataset.price
+    ).toLocaleString("ar-DZ")
+    +" دج"
+
+    :
+
+    "اختر الكمية لمعرفة السعر";
+
 }
 
 
-/* PAYMENT MESSAGE */
-function showPaymentMessage(method=""){
+/*
+================================================
+قراءة الطلب
+================================================
+*/
 
-    const cus
+function getOrder(app){
+
+  const d=data[app];
+
+  const sel =
+    document.getElementById(
+      d.select
+    );
+
+  const opt =
+    sel.options[
+      sel.selectedIndex
+    ];
+
+
+  if(!sel.value){
+
+    toast(
+      "اختر الكمية أولاً"
+    );
+
+    return null;
+
+  }
+
+
+  const id =
+    document
+      .getElementById(d.id)
+      .value
+      .trim();
+
+
+  if(!id){
+
+    toast(
+      "اكتب الـID أو اسم المستخدم أولاً"
+    );
+
+    document
+      .getElementById(d.id)
+      .focus();
+
+    return null;
+
+  }
+
+
+  return {
+
+    app,
+
+    qty:sel.value,
+
+    price:Number(
+      opt.dataset.price
+    ),
+
+    id
+
+  };
+
+}
+
+
+/*
+================================================
+إضافة إلى السلة
+================================================
+*/
+
+function addToCart(app){
+
+  const o=getOrder(app);
+
+  if(!o)return;
+
+  cart.push(o);
+
+  renderCart();
+
+  toast(
+    "تمت إضافة المنتج إلى السلة ✓"
+  );
+
+  scrollToId("cart");
+
+}
+
+
+/*
+================================================
+شراء سريع
+================================================
+*/
+
+function quickOrder(app){
+
+  const o=getOrder(app);
+
+  if(!o)return;
+
+
+  const msg =
+    `مرحباً، أريد طلب:
+${o.app}
+الكمية: ${o.qty}
+السعر: ${o.price} دج
+ID: ${o.id}`;
+
+
+  window.open(
+    "https://wa.me/"
+    +
+    WA_NUMBER
+    +
+    "?text="
+    +
+    encodeURIComponent(msg),
+    "_blank"
+  );
+
+}
+
+
+/*
+================================================
+عرض السلة
+================================================
+*/
+
+function renderCart(){
+
+  const box =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  document
+    .getElementById(
+      "cartCount"
+    )
+    .textContent=cart.length;
+
+
+  document
+    .getElementById(
+      "cartSummary"
+    )
+    .textContent =
+      cart.length
+      ?
+      cart.length+" منتج"
+      :
+      "لا توجد منتجات";
+
+
+  if(!cart.length){
+
+    box.innerHTML=
+      `
+      <p style="color:var(--muted)">
+        السلة فارغة.
+        اختر عرضًا من الأعلى.
+      </p>
+      `;
+
+    document
+      .getElementById(
+        "cartTotal"
+      )
+      .textContent="0 دج";
+
+    return;
+
+  }
+
+
+  let total=0;
+
+
+  box.innerHTML =
+    cart
+      .map((x,i)=>{
+
+        total+=x.price;
+
+
+        return `
+
+        <button
+          onclick="removeCart(${i})"
+        >
+
+          <b>
+            ${x.app}
+          </b>
+
+          —
+          ${x.qty}
+
+          —
+
+          <span class="price">
+            ${x.price.toLocaleString("ar-DZ")}
+            دج
+          </span>
+
+          <br>
+
+          <small
+            style="color:#9db0a6"
+          >
+            ID:
+            ${escapeHtml(x.id)}
+            • اضغط للحذف
+          </small>
+
+        </button>
+
+        `;
+
+      })
+      .join("");
+
+
+  document
+    .getElementById(
+      "cartTotal"
+    )
+    .textContent =
+      total.toLocaleString("ar-DZ")
+      +" دج";
+
+}
+
+
+/*
+================================================
+حذف من السلة
+================================================
+*/
+
+function removeCart(i){
+
+  cart.splice(i,1);
+
+  renderCart();
+
+  toast(
+    "تم حذف المنتج"
+  );
+
+}
+
+
+/*
+================================================
+إرسال السلة إلى واتساب
+================================================
+*/
+
+function checkout(){
+
+  if(!cart.length){
+
+    toast(
+      "السلة فارغة"
+    );
+
+    return;
+
+  }
+
+
+  let total =
+    cart.reduce(
+      (s,x)=>s+x.price,
+      0
+    );
+
+
+  let lines =
+    cart
+      .map(
+        (x,i)=>
+        `${i+1}) ${x.app} — ${x.qty} — ${x.price} دج — ID: ${x.id}`
+      )
+      .join("\n");
+
+
+  const msg =
+    encodeURIComponent(
+      `مرحباً RAHIMDZ27، أريد تأكيد طلبي:
+
+${lines}
+
+المجموع: ${total} دج`
+    );
+
+
+  window.open(
+    "https://wa.me/"
+    +
+    WA_NUMBER
+    +
+    "?text="
+    +
+    msg,
+    "_blank"
+  );
+
+}
+
+
+/*
+================================================
+واتساب
+================================================
+*/
+
+function contactWhatsApp(text){
+
+  window.open(
+    "https://wa.me/"
+    +
+    WA_NUMBER
+    +
+    "?text="
+    +
+    encodeURIComponent(
+      "مرحباً، "+text
+    ),
+    "_blank"
+  );
+
+}
+
+
+/*
+================================================
+فتح قائمة التطبيقات
+================================================
+*/
+
+function openAppsModal(){
+
+  document
+    .getElementById(
+      "appsModal"
+    )
+    .classList.add("open");
+
+}
+
+
+/*
+================================================
+إغلاق قائمة التطبيقات
+================================================
+*/
+
+function closeAppsModal(){
+
+  document
+    .getElementById(
+      "appsModal"
+    )
+    .classList.remove("open");
+
+}
+
+
+/*
+================================================
+اختيار تطبيق
+================================================
+*/
+
+function selectAppFromModal(app){
+
+  closeAppsModal();
+
+
+  /*
+  Who لا توجد له عروض محددة
+  */
+
+  if(app==="Who"){
+
+    showInfo(
+      "Who",
+      "متوفر للشحن — يتم تحديد العرض والسعر حسب طلب الزبون."
+    );
+
+    return;
+
+  }
+
+
+  /*
+  إظهار المنتجات بعد اختيار التطبيق
+  */
+
+  const title =
+    document.getElementById(
+      "productsTitle"
+    );
+
+  const section =
+    document.getElementById(
+      "productsSection"
+    );
+
+
+  if(title)
+    title.style.display="";
+
+
+  if(section)
+    section.style.display="";
+
+
+  const el =
+    document.getElementById(
+      app
+    );
+
+
+  if(el){
+
+    el.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+
+    setTimeout(
+      ()=>{
+        document
+          .getElementById(
+            data[app].select
+          )
+          ?.focus();
+      },
+      500
+    );
+
+  }
+
+}
+
+
+/*
+================================================
+فتح المنتج
+================================================
+*/
+
+function openProduct(app){
+
+  selectAppFromModal(app);
+
+}
+
+
+/*
+================================================
+معلومات Who
+================================================
+*/
+
+function showInfo(
+  title,
+  content
+){
+
+  document
+    .getElementById(
+      "modalTitle"
+    )
+    .textContent=title;
+
+
+  document
+    .getElementById(
+      "modalContent"
+    )
+    .innerHTML=
+
+    `
+    <p
+      style="
+      line-height:1.9;
+      color:#cddbd3
+      "
+    >
+      ${content}
+    </p>
+
+    <button
+      class="btn primary"
+      style="width:100%"
+      onclick="
+        contactWhatsApp(
+          'أريد شحن '+title
+        )
+      "
+    >
+      طلب عبر واتساب
+    </button>
+    `;
+
+
+  document
+    .getElementById(
+      "modal"
+    )
+    .classList.add("open");
+
+}
+
+
+/*
+================================================
+إغلاق نافذة المعلومات
+================================================
+*/
+
+function closeModal(){
+
+  document
+    .getElementById(
+      "modal"
+    )
+    .classList.remove("open");
+
+}
+
+
+/*
+================================================
+حماية النص
+================================================
+*/
+
+function escapeHtml(s){
+
+  return s.replace(
+    /[&<>"']/g,
+
+    m=>
+      ({
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#039;"
+      }[m])
+  );
+
+}
+
+
+/*
+================================================
+إغلاق النوافذ عند الضغط خارجها
+================================================
+*/
+
+document
+  .getElementById("modal")
+  .addEventListener(
+    "click",
+    e=>{
+      if(
+        e.target.id==="modal"
+      )
+        closeModal();
+    }
+  );
+
+
+document
+  .getElementById("appsModal")
+  .addEventListener(
+    "click",
+    e=>{
+      if(
+        e.target.id==="appsModal"
+      )
+        closeAppsModal();
+    }
+  );
+
+</script>
+
+</body>
+</html>
